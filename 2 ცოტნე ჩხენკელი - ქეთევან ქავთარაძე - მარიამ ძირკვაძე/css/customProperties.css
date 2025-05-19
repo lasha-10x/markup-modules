@@ -1,0 +1,54 @@
+:root{
+
+    /* background colors */
+    --bg-clr-primary: #F6F9FC;
+    --bg-clr-secondary: #0A2540;
+    --bg-clr-white: #FFFFFF;
+
+
+    /* button colors */
+    --btn-clr-primary: #635BFF;
+    --hero-btn-clr: #0a2540;
+    --dfd-btn-clr: #00D4FF;
+
+    /* h1 colors */
+    --h1-txt-clr: #3a3a3a;
+
+    /* h1 sizes */
+    --h1-fs: 85px;
+
+    
+
+    /* h2 colors */
+    --h2-clr-primary:#0A2540;
+
+    /* h3 sizes */
+    --h3-fs-primary: 36px;
+
+    /* form */
+    --sub-hdr-clr: #62788D;
+
+
+    /* paragraph colors */
+
+    --parag-clr-primary: #425466;
+    --parag-clr-secondary: #ADBDCC;
+    --nav-txt-clr: #ffffff;
+
+
+    /* paragraph sizes */
+    --parag-fs-primary: 16.45px;
+    --parag-ln-hght-primary: 28px;
+
+
+    /* section sizes */
+    --ms-width: 1080px;
+    --ms-h2-max: 51px;
+    --ms-h2-min: 44px;
+    --ms-p: 17.5px;
+    --ms-h2-lh-max: 68px;
+    --ms-h2-lh-min: 56px;
+    --ms-p-lh: var(--parag-ln-hght-primary);
+    --header-width: 1080px;
+}
+

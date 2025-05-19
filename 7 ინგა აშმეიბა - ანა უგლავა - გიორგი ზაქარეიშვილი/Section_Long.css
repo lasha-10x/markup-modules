@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+}
+
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1080px;
+  padding: 128px 420px 196px 420px;
+  background-color: #F6F9FC;
+}
+
+div.textWrapper {
+  max-width: 540px;
+}
+
+.textWrapper>span {
+  font-size: 16.73px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  padding-left: 16px;
+  color: #635BFF;
+}
+
+.textWrapper>h2 {
+  font-size: 51.63px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: -1.1200000047683716px;
+  padding: 32px 64px 32px 16px;
+  color: #0A2540;
+
+}
+
+.textWrapper>p {
+  font-size: 17.58px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  padding-left: 16px;
+  color: #425466;
+}
+
+
+
+div.visaCards {
+  max-width: 540px;
+}
+
+div.cardWrapper {
+  position: relative;
+  width: 351px;
+  height: 217px;
+}
+
+.visaTop,
+.visaMiddle,
+.visaBottom {
+  position: absolute;
+  left: 94.5px;
+}
+
+.visaTop {
+  z-index: 1;
+  top: 136px;
+}
+
+.visaMiddle {
+  z-index: 2;
+  top: 229px;
+}
+
+.visaBottom {
+  z-index: 3;
+  top: 322px;
+}
+
+.cardWrapper>.leftStikers {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.leftBottomStiker {
+  width: 42px;
+  height: 42px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftBottomStiker>img {
+  width: 21px;
+  height: 21px;
+}
+
+.leftTopStiker {
+  width: 42.5px;
+  height: 42.5px;
+}
+
+.cardWrapper>.rightStikers {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 211px;
+  left: 481.5px;
+}
+
+.rightStikers>.rightTopStiker {
+  width: 42.5px;
+  height: 42.5px
+}
+
+.rightStikers>.rightBottomStiker {
+  position: relative;
+  width: 42.5px;
+  height: 42.5px;
+  top: -3px;
+}
+
+.leftTopLines {
+  width: 68px;
+  height: 80px;
+  padding-left: 20px;
+  padding-top: 227px;
+}
+
+.leftBottomLines {
+  width: 68px;
+  height: 86px;
+  padding-left: 20px;
+  padding-top: 62.5px;
+}
+
+.rightTopLines {
+  position: relative;
+  width: 68px;
+  height: 32.5px;
+  left: -45.8px;
+  /*435.7p rightTopLines left - 481.5 rightStikers left*/
+}
+
+.rightBottomLines {
+  position: relative;
+  width: 68px;
+  height: 129px;
+  left: -45.8px;
+  top: -3px;
+}
+
+/* section 2*/
+
+div.textWrapper2 {
+  max-width: 540px;
+  padding-right: 115px;
+  padding-left: 16px;
+}
+
+.formWrapper {
+  margin-top: -70px;
+  width: 283px;
+  height: 617px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productDetails>.name {
+  margin: 10px 0 10px 0;
+  color: #727F96;
+}
+
+.productDetails>.price {
+  margin: 10px 0 10px 0;
+}
+
+.formWrapper>.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formWrapper>.payAnotherWay>hr {
+  background-color: #CED3D9;
+  height: 1px;
+}
+
+.formWrapper>.payAnotherWay {
+  position: relative;
+  margin: 20px 0;
+}
+
+.formWrapper>.payAnotherWay>div {
+  position: absolute;
+  top: -10px;
+  left: 68px;
+  background-color: white;
+  padding: 0 10px;
+  color: #727F96;
+}
+
+.formWrapper>form>label {
+  color: #0A2540;
+  font-size: 14px;
+}
+
+.payment-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #0A2540;
+  color: white;
+}
+
+.payment-apple {
+  background: black;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.payment-apple>img {
+  width: 13px;
+  height: 13px;
+}
+
+.link-pay {
+  background: #33DDB3;
+  color: #204E52;
+  border: 0;
+  border-radius: 4px;
+  height: 30px;
+  font-weight: 600;
+}
+
+.link-pay>span {
+  font-size: 17px;
+  font-weight: 700;
+  border-right: 1px solid #29D4AA;
+  padding-right: 5px;
+}
+
+#cvv {
+  width: 124.02px;
+  height: 27.02px;
+}
+
+#expirydate {
+  width: 123.02px;
+  height: 27.02px;
+}
+
+#email {
+  margin: 5px 0;
+}
+
+/* section3*/
+
+
+div.textWrapper3 {
+  max-width: 540px;
+  padding-right: 42px;
+  padding-left: 16px;
+}
+div.quantumTable{
+  margin-top: 28px;
+  margin-left: 42px;
+}
+
+
+
+
+
+
+
+/*section4*/
+
+
+div.textWrapper4 {
+  max-width: 540px;
+  padding-right: 101.9px;
+  padding-left: 16px;
+}
+
+.billing,
+.payments,
+.connect,
+.Issuing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.billing>span,
+.payments>span,
+.connect>span,
+.Issuing>span {
+
+  font-size: 17.02px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  color: #2E3A55;
+}
+
+.textWrapper2>h2,
+.textWrapper3>h2,
+.textWrapper4>h2,
+.textWrapper5>h2 {
+  font-weight: 700;
+  font-size: 35.92px;
+  line-height: 48px;
+  letter-spacing: -0.2px;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  padding-right: 64px;
+  color: #0A2540;
+
+}
+
+.textWrapper2>input,
+.textWrapper3>input,
+.textWrapper4>input,
+.textWrapper5>input {
+  width: 158.66px;
+  height: 33px;
+  border-radius: 16.5px;
+  background-color: #635BFF;
+  color: white;
+  border: 0;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.text2,
+.text3,
+.text4,
+.text5 {
+  font-weight: 500;
+  font-size: 16.31px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #425466;
+
+}
+/*for all <p> */
+.bottom{
+  font-size: 13.83px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+}
+
+
+
+.textWrapper4>img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+div.container_4 {
+  max-width: 540px;
+}
+
+
+
+
+
+
+
+
+/*sectio5*/
+div.textWrapper5 {
+  max-width: 540px;
+  padding-left: 16px;
+}
+
+
+.visaTop5,
+.visaMiddle5,
+.visaBottom5 {
+  position: absolute;
+  left: 96.8px;
+}
+
+.visaTop5 {
+  z-index: 1;
+  top: 23px;
+}
+
+.visaMiddle5 {
+  z-index: 2;
+  top: 116px;
+}
+
+.visaBottom5 {
+  z-index: 3;
+  top: 209px;
+}

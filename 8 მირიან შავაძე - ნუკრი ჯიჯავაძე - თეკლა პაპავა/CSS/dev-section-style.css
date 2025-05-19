@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter_18pt-Regular.ttf);
+  font-family: Code;
+  src: url(/assets/fonts/SourceCodePro-Regular.ttf);
+}
+
+#dev-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #0A2540;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 300px;
+    padding-bottom: 300px;
+    font-family: Inter
+    
+    
+}
+
+@media (max-width: 768px) {
+    #dev-section {
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+#container {
+    display: flex;
+    gap:60px;   
+    justify-content: center;
+    margin-bottom: 160px;
+    
+}
+
+#developer-title-container {
+    margin-bottom: 96px;
+    margin-top: 40px;
+    padding-left: 36px;
+    
+    
+}
+
+#design-developers {
+    color: #00D4FF;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 32px;
+    
+}
+
+#ship-title {
+    color: #FFFFFF;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 32px;
+}
+
+#developer-content {
+    color: #ADBDCC;
+    line-height: 28px;
+    font-size: 16.59px;
+    margin-bottom: 32px;
+}
+
+.button {
+    background-color: #00D4FF;
+    border-radius: 16.5px;
+    width: 144px;
+    color: #0A2540;
+    outline: none;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#code-snippet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: Code;
+}
+
+.line-number {
+    display: inline-block;
+    margin-right: 5px;
+    color: #6C738B;
+    text-align: right;
+    margin-bottom: 5px; 
+}
+
+.code-nav {
+  display: flex;
+  background-color: #0A2540;
+  font-family: Code;
+  
+}
+
+.code-nav nav {
+  display: flex;
+  background-color: #0A2540;
+  font-family: Code;
+}
+
+.code-nav nav h3 {
+  font-size: 14px;
+  color: #8095FF;
+  cursor: pointer;          /* Make it look clickable */
+  padding: 8px 16px;        /* Space inside each tab */
+  transition: background 0.3s ease; /* Smooth hover effect */
+  border-radius: 2px;
+}
+
+.code-nav nav h3:hover {
+  color: #06182C;
+  background-color: #8095FF; /* Hover effect */
+}
+
+.nav-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #55718D;
+  font-weight: bold;
+  text-align: right;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+#developer-footer {
+    width: clamp(320px, 80%, 1080px);
+    display: flex;
+    margin: auto;
+    /* align-items: center; */
+    /* justify-content: center;  */
+}
+
+.dev-headers{
+    color: white;
+    margin-top: 50px;
+    margin-right: 70px;
+    
+};
+
+
+
+.dev-headers h3{
+    font-size: 13.71px;
+    line-height: 24px;
+}
+
+.dev-headers h3::before {
+    content: ' ';
+    width: 2px;
+    border-left: 1px solid #00D4FF;
+    position: relative;
+    top: 0;
+    right: 20px;
+
+}
+
+.dev-headers p {
+    color: #ADBDCC;
+    font-size: 13.59px;
+    line-height: 24px;    
+}
+
+.dev-headers img {
+  margin-left: -20px; /* Negative margin to create overlap */
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dev-headers button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #00D4FF;
+    
+}
+
+/* .vl {
+    border-left: 1px solid #00D4FF;
+    height: 15px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  } */
+
+  .arrow-dev {
+    border: solid #00D4FF;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+
+  .arrow-button {
+    border: solid #0A2540;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+
+  }
+
+  .Container {
+    border-radius: 6px;
+    width: 540px;
+    height: 249px;
+    position: relative;
+    background: #0C2E4E;
+    color: white;
+    margin: 60px auto 0 auto;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3);
+    
+  }
+    
+  .credit {
+    left: 50%;
+    bottom: 30px;
+    width: 300px;
+    position: fixed;
+    text-align: center;
+    margin-left: -150px;
+    
+    p {
+      color: #6C738B;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+    
+    p a {
+      color: #0000b3;
+      font-weight: 400;
+      text-decoration: none;
+    }
+    
+    p a:hover { color: #5C33FF; }
+  }
+
+.code-snippet {
+    display: inline-block;
+    font-family: Code;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 4s steps(40) 1s infinite, blink 0.75s step-end infinite;
+    
+  }
+
+  .console {
+    background-color: black;
+    display: inline-block;
+    background-color: #06182C;
+    margin-top: -27px;
+    width: 100%;
+    font-size: 14px;
+    
+  }
+
+  .console-snippet {
+    overflow: hidden;
+    
+    animation: typing 4s steps(40) 1s infinite, blink 0.75s step-end infinite;  
+}
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  #container {
+      flex-direction: column;
+      margin: 50px;
+      gap: 50px;
+  }
+  
+}
+
+@media (max-width: 1100px) {
+  #container {
+      gap: 30px;
+  }
+
+  #ship-title {
+      font-size: 28px;
+      line-height: 38px;
+  }
+
+  #developer-content {
+      font-size: 14px;
+      line-height: 22px;
+  }
+
+  .button {
+      width: 100%;
+      max-width: 200px;
+  }
+
+  #developer-footer {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 100px;
+      text-align: center;
+  }
+
+  #dev-headers {
+    text-align: left;
+  }
+  .vl {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #developer-footer {
+    display: flex;
+    flex-direction: column;
+    
+}
+}
+
+  

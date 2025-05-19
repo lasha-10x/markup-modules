@@ -1,0 +1,380 @@
+.built-growth {
+  background-color: rgb(246 249 252);
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  .top-content {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      font: 500 16.17px sans-serif;
+      color: rgba(99, 91, 255, 1);
+    }
+
+    h3 {
+      font: 700 33.99px sans-serif;
+      color: rgba(10, 37, 64, 1);
+    }
+
+    p {
+      font: 500 16.59px sans-serif;
+      color: rgba(66, 84, 102, 1);
+      padding-right: 416px;
+      max-width: 620px;
+      line-height: 28px;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .bottom-content {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+
+    .left-side,
+    .right-side {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .left-side {
+      padding-top: 130px;
+      padding-left: 16px;
+    }
+
+    .right-side {
+      padding-right: 16px;
+    }
+
+    .card {
+      border: 4px solid white;
+      border-radius: 4px;
+      width: 500px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0px 30px 45px -30px #32325d40, 0px 18px 36px -18px #0000001a;
+
+      .description {
+        padding: 32px 0 0 32px;
+        background-color: white;
+        height: 100%;
+        transition: transform 0.3s ease;
+
+        h2 {
+          padding-top: 8px;
+          font: 600 24.07px sans-serif;
+          color: rgba(10, 37, 64, 1);
+        }
+
+        p {
+          padding: 12px 100px 20px 0;
+          max-width: 500px;
+          color: $text-primary-color;
+        }
+
+        .title {
+          font: 500 11.25px sans-serif;
+          color: rgba(46, 58, 85, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          background-color: rgb(246 249 252);
+          height: 40px;
+          border-radius: 4px;
+        }
+
+        .atlas-icon {
+          width: 86px;
+        }
+
+        .checkout-icon {
+          width: 110px;
+        }
+
+        .payment-icon {
+          width: 136px;
+        }
+
+        .invoicing-icon {
+          width: 110px;
+        }
+
+        button {
+          position: absolute;
+          top: 195px;
+          background-color: transparent;
+          border: none;
+          gap: 5px;
+          color: #635bff;
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.4s ease, transform 0.3s ease, visibility 0.3s;
+
+          h5 {
+            font: 600 15px sans-serif;
+            transition: color 0.5s ease;
+          }
+
+          .arrow {
+            width: 10px;
+            height: 2px;
+            position: relative;
+            transition: 0.2s;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border: solid;
+              border-width: 0px 2px 2px 0px;
+              top: -3px;
+              right: 3px;
+              transition: 0.2s;
+              padding: 3px;
+              transform: rotate(-45deg);
+              box-sizing: border-box;
+              display: inline-block;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+            color: #0a2540;
+
+            .arrow {
+              background: #0a2540;
+            }
+
+            .arrow::before {
+              right: 0;
+              color: #0a2540;
+            }
+          }
+        }
+      }
+
+      .bg {
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .atlas-img {
+        background-image: url(../assets/images/atlas.png);
+        width: 434px;
+        height: 272px;
+        margin: 66px 0 0 60px;
+      }
+
+      .checkout-img {
+        background-image: url(../assets/images/checkout.png);
+        width: 434px;
+        height: 272px;
+        margin: 66px 0 0 60px;
+      }
+
+      .payment-img1 {
+        background-image: url(../assets/images/payment-back1.png);
+        width: 234px;
+        height: 234px;
+        margin: 0;
+      }
+
+      .payment-img2 {
+        background-image: url(../assets/images/payment-back2.png);
+        width: 234px;
+        height: 234px;
+        margin: -130px 0 20px 270px;
+      }
+
+      .invoicing-img {
+        background-image: url(../assets/images/invoicing.png);
+        width: 356px;
+        height: 260px;
+        margin: 50px 0 20px 72px;
+      }
+
+      .atlas,
+      .payment {
+        top: 195px;
+      }
+
+      .checkout,
+      .invoicing {
+        top: 215px;
+      }
+    }
+  }
+
+  .card:hover {
+    background-color: rgb(246 249 252);
+    background-position: 50% 50%;
+    background-size: 150% 150%;
+    animation: moveGradient 40s ease infinite;
+    &.yellow {
+      background-image: radial-gradient(
+          at 67% 26%,
+          #ffc250 0px,
+          transparent 30%
+        ),
+        radial-gradient(at 39% 64%, #fae187 0px, transparent 30%);
+    }
+
+    &.cyan {
+      background-image: radial-gradient(
+          at 67% 26%,
+          #8bfff9 0px,
+          transparent 30%
+        ),
+        radial-gradient(at 39% 64%, #b793ff 0px, transparent 30%);
+    }
+
+    &.purple {
+      background-image: radial-gradient(
+          at 67% 26%,
+          #81f1ec 0px,
+          transparent 30%
+        ),
+        radial-gradient(at 39% 64%, #af8ff0 0px, transparent 30%);
+    }
+
+    &.green {
+      background-image: radial-gradient(
+          at 67% 26%,
+          #ffe68a 0px,
+          transparent 30%
+        ),
+        radial-gradient(at 39% 64%, #4ba04b 0px, transparent 30%);
+    }
+
+    .description {
+      transform: translateY(-45px);
+
+      button {
+        opacity: 1;
+        transform: translateY(-15px);
+      }
+    }
+
+    .bg {
+      transform: translateY(-13px);
+    }
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 50% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  75% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .built-growth {
+    .top-content {
+      h3 {
+        max-width: 682px;
+      }
+      p {
+        max-width: 682px;
+      }
+    }
+
+    // .bottom-content {
+    //   .left-side,
+    //   .right-side {
+    //     .card {
+    //       .description {
+    //         h2 {
+    //         }
+    //         p {
+    //         }
+    //         .title {
+    //         }
+    //         button {
+    //           h5 {
+    //           }
+    //           .arrow {
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .built-growth {
+    .top-content {
+      h3 {
+        max-width: 682px;
+      }
+      p {
+        max-width: 682px;
+        width: 100%;
+      }
+    }
+
+    .bottom-content {
+      display: flex;
+      flex-direction: column;
+      .left-side,
+      .right-side {
+        padding: 0 !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        /* .card{
+            max-width: 352px;
+          } */
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .built-growth {
+    .top-content {
+      h3 {
+        max-width: 682px;
+      }
+      p {
+        max-width: 682px;
+        width: 100%;
+      }
+    }
+
+    .bottom-content {
+      display: flex;
+      flex-direction: column;
+      .left-side,
+      .right-side {
+        padding: 0 !important;
+        position: relative;
+        left: 30%;
+        transform: translateX(-50%);
+        .card {
+          max-width: 352px;
+        }
+      }
+    }
+  }
+}

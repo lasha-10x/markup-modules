@@ -1,0 +1,43 @@
+@mixin background($width, $height, $background, $background_size, $background_repeat, $background_position) {
+    width: $width; 
+    height: $height; 
+    background: $primaryBackground;
+    background-size: $background_size; 
+    background-repeat: $background_repeat; 
+    background-position: $background_position; 
+  }
+  @mixin paddingCenter($paddingLeft, $paddingRight) {
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+  }
+  @mixin paddingCenter2($paddingTop, $paddingBottom) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+  }
+  @mixin fontStyle {
+    font-family: "Inter", serif;
+    font-weight: 500;
+  }
+  @mixin secondaryFontStyle($font_size, $line_height, $letter_spacing, $color) {
+    font-size: $font_size;
+    line-height: $line_height;
+    letter-spacing: $letter_spacing;
+    color: $color;
+  }
+  @mixin flexColumn($justifyContent, $alignItems) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+  }
+  @mixin flexCenter($justifyContent, $alignItems) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+  }
+  @mixin primaryButton {
+    background-color: #635bff;
+    border: none;
+    border-radius: 1.0313rem;
+    cursor: pointer;
+  }

@@ -1,0 +1,2581 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+}
+
+/* ---- ANIMATIONS ---- */
+
+@keyframes bganimation {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes borderGrow {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+
+body {
+  overflow-x: hidden;
+  /* background: linear-gradient(
+    to right,
+    #d3d3d3,
+    #d3d3d3 1px,
+    transparent 1px,
+    transparent 20px
+    );
+    background-size: 420px 100%; */
+}
+
+/* ---- GLOBAL TAGS ---- */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  background-image: url(./img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: initial;
+  width: 1920px;
+  height: 580px;
+  animation: bganimation 15s linear infinite;
+  backdrop-filter: blur(5px);
+  clip-path: polygon(0% 0, 0% 100%, 126% 0%, 0 0%);
+}
+
+/* ---- HEADER SECTION ---- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1112px;
+  height: 68px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+header nav img {
+  width: 59.7px;
+  height: 24.76px;
+  cursor: pointer;
+}
+
+header nav ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 14.18px;
+  font-weight: 500;
+}
+
+header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 101px;
+  height: 44px;
+  cursor: pointer;
+}
+
+header a {
+  color: #ffffff;
+}
+
+header .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15.99px;
+  white-space: nowrap;
+}
+
+header .btns .contact a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 115.61px;
+  height: 33px;
+  font-size: 13.95px;
+}
+
+header .btns .contact a .both-rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header .btns .contact a .right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header .btns .contact a:hover .right {
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+header .btns .contact a .right-row {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header .btns .contact a:hover .right-row {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+header .btns .sign-in {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92.22px;
+  height: 33px;
+  border-radius: 16.5px;
+  border: none;
+  background-color: #ffffff;
+  color: #e17537;
+  font-size: 13.83px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 3px 26px 6px 16px;
+}
+
+header .btns .sign-in .both-rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header .btns .sign-in .right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header .btns .sign-in:hover .right {
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+header .btns .sign-in .right-row {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header .btns .sign-in:hover .right-row {
+  opacity: 1;
+  transform: translateX(0);
+}
+.resp-btn {
+  display: none;
+}
+
+.resp-btn #burger-button {
+  display: none;
+  width: 48px;
+  height: 32px;
+  color: #000000;
+  font-size: 16px;
+  background: #ffffff33;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.fa-xmark {
+  display: none;
+  color: #000000;
+  background: #ffffff33;
+  border: none;
+  border-radius: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* ---- SECTION CONTAINER ---- */
+
+.section-container {
+  width: 1080px;
+  display: flex;
+  margin: 48px auto;
+  gap: 253px;
+}
+
+.section-container .stripe {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  padding-left: 16px;
+}
+
+.section-container .stripe .financial-infrastructure {
+  margin-top: 100px;
+  font-size: clamp(46.02px, 5vw, 83.35px);
+  line-height: clamp(53.94px, 5vw, 97.76px);
+  color: rgba(58, 58, 58, 1);
+  padding-bottom: 20px;
+  letter-spacing: clamp(-3.36px, 3vw, -2.08px);
+}
+
+.section-container .stripe .about-stripe {
+  font-size: clamp(16.59px, 5vw, 17.86px);
+  font-weight: 700;
+  line-height: 28px;
+  color: rgba(66, 84, 102, 1);
+  letter-spacing: 0.2px;
+  padding-right: 53px;
+}
+
+.section-container .stripe .email-and-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.section-container .stripe .email-and-contact .email-address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 45px;
+  border-radius: 33px;
+  position: relative;
+}
+
+.section-container .stripe .email-and-contact .email-address input {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f8fb;
+  border: none;
+  outline: none;
+  border-radius: 33px;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.section-container .stripe .email-and-contact .email-address button {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  right: 7px;
+  width: 111px;
+  height: 33px;
+  background: rgba(10, 37, 64, 1);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 16.5px;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.section-container .stripe .email-and-contact .email-address button .both-rows {
+  position: absolute;
+  right: 0;
+}
+
+.section-container .stripe .email-and-contact .email-address button:hover .right {
+  visibility: hidden;
+}
+
+.section-container .stripe .email-and-contact .email-address button .right-row {
+  visibility: hidden;
+}
+
+.section-container .stripe .email-and-contact .email-address button:hover .right-row {
+  visibility: visible;
+}
+
+.section-container .stripe .resp-contact {
+  display: none;
+}
+
+.section-container .payments-and-transfers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.section-container .payments-and-transfers .phone {
+  position: absolute;
+  transform: translateY(8%);
+  left: -120px;
+  width: 254px;
+  height: 520px;
+  border-radius: 33px;
+  border: 5px solid rgb(246, 249, 252);
+}
+
+.section-container .payments-and-transfers .transfer {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  height: 571.69px;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.3) 25%,
+      rgba(246, 249, 252, 0.3) 50%,
+      #f6f9fc 60%);
+  border-radius: 8px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section {
+  display: flex;
+  align-items: center;
+  margin: 24px 24px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section img {
+  width: 20px;
+  height: 20px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section .rocket-rides,
+i {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 9.5px;
+  font-weight: 800;
+  line-height: 14px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.section-container .payments-and-transfers .transfer .header-section .search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 278px;
+  height: 20px;
+  border-radius: 4px;
+  margin-left: 23px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section .search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  padding-left: 25px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section .search input::placeholder {
+  color: rgba(98, 120, 141, 1);
+  font-size: 10.14px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+}
+
+.section-container .payments-and-transfers .transfer .header-section .search i {
+  position: absolute;
+  color: rgba(98, 120, 141, 1);
+  left: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.section-container .payments-and-transfers .transfer .dashboard {
+  margin-left: 180px;
+}
+
+/* ---- SITES SECTIION ---- */
+
+.sites-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(347px, 18vw, 1080px);
+  height: 250px;
+  margin: 128px auto;
+}
+
+.sites-section .sites-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  height: 140px;
+}
+
+.sites-section .sites-container .sites {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.sites-section .sites-container .sites .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(184px, 27vw, 370px);
+}
+
+.sites-section .sites-container .bottom-sites {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.sites-section .sites-container .bottom-sites .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(184px, 27vw, 370px);
+}
+
+/* ---- SECOND CONTAINER ---- */
+
+.second-container {
+  position: relative;
+  width: 100%;
+  background-color: rgb(10, 37, 64);
+  height: 1020px;
+  clip-path: polygon(0% 10%, 0% 100%, 100% 100%, 100% 0%);
+  padding-top: 1px;
+  overflow-x: hidden;
+}
+
+.second-container .global-scale-main-container {
+  width: clamp(736px, 100vw, 1080px);
+  margin: 287px auto auto auto;
+}
+
+.second-container .global-scale-main-container .global-scale-info {
+  width: 500px;
+  padding-left: 16px;
+}
+
+.second-container .global-scale-main-container .global-scale-info h5 {
+  position: relative;
+  z-index: 2;
+  font-size: 17.16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  color: #00D4FF;
+  padding: 24px 0;
+}
+
+.second-container .global-scale-main-container .global-scale-info h2 {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  font-size: clamp(32.01px, 100%, 35.18px);
+  font-weight: 500;
+  line-height: clamp(41px, 100%, 48px);
+  letter-spacing: -0.24px;
+  color: #FFFFFF;
+  padding-bottom: 24px;
+}
+
+.second-container .global-scale-main-container .global-scale-info p {
+  position: relative;
+  z-index: 2;
+  width: 360px;
+  font-size: 17.72px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  color: #ADBDCC;
+}
+
+.second-container .global-scale-main-container .global-scale-container {
+  position: relative;
+  z-index: 2;
+  margin-top: 98px;
+  width: 100%;
+  height: 88px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.second-container .global-scale-main-container .global-scale-container .min-container {
+  width: clamp(248px, 100%, 270px);
+  height: 112px;
+}
+
+.second-container .global-scale-main-container .global-scale-container .min-container h2 {
+  padding-left: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.12px;
+  color: rgba(255, 255, 255, 1);
+  border-left: 1px solid #00D4FF;
+}
+
+.second-container .global-scale-main-container .global-scale-container .min-container p {
+  padding-left: 16px;
+  font-size: 13.71px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: rgba(173, 189, 204, 1);
+}
+
+.second-container .global-scale-main-container .global-scale-container .min-container a {
+  text-decoration: none;
+  color: #00D4FF;
+}
+
+.second-container .main-globe {
+  position: absolute;
+  top: 0;
+  right: calc(-7% - (100vw - 1920px) * -0.5);
+  width: 1080px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container .main-globe .globe {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.second-container .canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/* ---- THIRD CONTANER ---- */
+
+.third-container {
+  width: 100%;
+}
+
+.third-container .slide-main {
+  margin: 128px auto;
+  width: clamp(390px, 90vw, 1080px);
+}
+
+.third-container .slide-main .enterprise-container {
+  padding-left: 16px;
+}
+
+.third-container .slide-main .enterprise-container .enterprise {
+  color: #635BFF;
+  font-size: 16.45px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+}
+
+.third-container .slide-main .enterprise-container .bring-quality {
+  margin: 24px 0;
+  color: #0A2540;
+  font-size: 34.73px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.24px;
+}
+
+.third-container .slide-main .enterprise-container .services-highlight {
+  color: #425466;
+  font-size: 16.45px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  margin-bottom: 24px;
+  width: 709.39px;
+}
+
+.third-container .slide-main .enterprise-container .services-highlight a {
+  color: #635BFF;
+}
+
+.third-container .slide-main .enterprise-container button {
+  position: relative;
+  width: 270px;
+  height: 33px;
+  color: #f6f9fc;
+  background-color: #635BFF;
+  border: none;
+  outline: none;
+  border-radius: 22px;
+  cursor: pointer;
+  font-size: 13.95px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+}
+
+.third-container .slide-main .enterprise-container button .both-rows {
+  position: absolute;
+  right: 0px;
+}
+
+.third-container .slide-main .enterprise-container:hover .right {
+  visibility: hidden;
+}
+
+.third-container .slide-main .enterprise-container button .right-row {
+  visibility: hidden;
+}
+
+.third-container .slide-main .enterprise-container button:hover .right-row {
+  visibility: visible;
+}
+
+.third-container .slide-main .slide-container .slide {
+  display: flex;
+  margin-top: 64px;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head {
+  width: 270px;
+  height: 397.81px;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head p{
+  width: 202px;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .number {
+  padding-left: 16px;
+  border-left: 1px solid #635BFF;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.92px;
+  letter-spacing: 0.24px;
+  color: #0A2540;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .company-info {
+  padding-left: 16px;
+  font-size: 13.83px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #425466;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .second-cont {
+  margin: 48px 0;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .second-cont .payment-info {
+  padding-left: 16px;
+  font-size: 13.83px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #425466;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .product-cont .product-used {
+  padding-left: 16px;
+  border-left: 1px solid #635BFF;
+  margin-bottom: 8px;
+  font-size: 13.95px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #0A2540;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .product-cont .slide-payments,
+.slide-connect {
+  padding-left: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.15px;
+  letter-spacing: 0.24px;
+  color: #425466;
+}
+
+.third-container .slide-main .slide-container .slide .slide-head .product-cont .slide-payments img,
+.slide-connect img {
+  margin-right: 16px;
+}
+
+.third-container .slide-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(744px, 88vw, 810px);
+  border-radius: 10px;
+}
+
+.third-container .slide-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.third-container .slide-img img.active {
+  opacity: 1;
+}
+.third-container .slide-partner-sites {
+  margin-top: 40px;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+
+.third-container .slide-partner-sites .slide-bmw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(248px, 100vw, 263px);
+  height: 100px;
+  position: relative;
+}
+.third-container .slide-partner-sites .slide-bmw .line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 32, 96, 0.8) 100%, rgba(0, 32, 96, 0.8) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  animation: borderGrow 10s infinite;
+}
+.third-container .slide-partner-sites .slide-amazon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(248px, 100vw, 263px);
+  height: 100px;
+  position: relative;
+}
+.third-container .slide-partner-sites .slide-amazon .line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(204, 153, 0, 0.8) 100%, rgba(204, 153, 0, 0.8) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  animation: borderGrow 10s infinite;
+}
+.third-container .slide-partner-sites .slide-maersk{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(248px, 100vw, 263px);
+  height: 100px;
+  position: relative;
+}
+.third-container .slide-partner-sites .slide-maersk .line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  height: 1px;  
+  background: linear-gradient(90deg, rgba(0, 202, 175, 0.8) 100%, rgba(0, 131, 192, 0.8) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  animation: borderGrow 10s infinite;
+}
+
+.third-container .slide-partner-sites .slide-twilio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(248px, 100vw, 263px);
+  height: 100px;
+  position: relative;
+}
+.third-container .slide-partner-sites .slide-twilio .line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  height: 1px; 
+  background: linear-gradient(90deg, rgba(174, 40, 30, 0.8) 100%, rgba(174, 40, 30, 0.8) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  animation: borderGrow 10s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ლაშას სექცია - მეოთხე */
+
+/* Forth-Container -------------------------------------------------------- */
+
+
+.forth-container {
+  width: 100%;
+}
+
+.forth-container .textbanners {
+  margin: 0 auto;
+  /* width: 1080px; */
+  width: clamp(390px, 100vw, 1080px);
+}
+
+.forth-container .textarea {
+  width: clamp(390px, 100vw, 650px);
+  justify-content: center;
+  align-items: center;
+}
+
+.forth-container .textarea .growth {
+  font-size: 16.17px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  color: #635BFF;
+}
+
+.forth-container .textarea h2 {
+  padding: 0px 0px 16px 0px;
+  font-size: 30.41px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.1px;
+  color: #0A2540;
+}
+
+.forth-container .textarea p {
+  padding: 0px 0px 16px 0px;
+  font-size: 16.59px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #425466;
+}
+
+.forth-container .banners {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.forth-container .Banner1 {
+  margin-top: 130px;
+
+}
+
+.forth-container .banner {
+  position: relative;
+  margin: 16px auto;
+  padding: 8px;
+  width: clamp(350px, 45vw, 500px);
+  height: 525px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 2px rgba(167, 167, 167, 0.532)
+}
+
+.forth-container .banner img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.forth-container .bannertext {
+  margin-top: 20px;
+}
+
+.forth-container .bannertext img {
+  width: 109px;
+  height: 40px;
+}
+
+.forth-container .banner .bannerlink {
+  display: none;
+  position: absolute;
+  bottom: 16px;
+}
+
+.forth-container .banner:hover .bannerlink {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+/* ლაშას სექცია - მეხუთე */
+
+/* fifth-container ----------------------------------------------------------- */
+
+.fifth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0A2540;
+  clip-path: polygon(0% 10%, 0% 100%, 100% 90%, 100% 0%);
+}
+
+.fifth-container .devblock {
+  width: clamp(390px, 95vw, 1080px);
+  margin: 287px auto;
+}
+
+.fifth-container .devsection {
+  padding: 0px 0px 16px 0px;
+  height: 417;
+}
+
+.fifth-container .devsection .p2 {
+  font-size: 17.02px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #00D4FF;
+}
+
+.fifth-container .devsection h2 {
+  width: 390px;
+  font-size: 32.27px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+}
+
+.fifth-container .devsection p {
+  padding: 0px 0px 24px 0px;
+  width: 390px;
+  font-size: 17.16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #ADBDCC;
+}
+
+.fifth-container .devsection button {
+  border-radius: 16px;
+  border: none;
+  width: 130px;
+  height: 33px;
+  background-color: #00D4FF;
+  color: #000000;
+}
+
+.fifth-container .devcodarea {
+  display: flex;
+  align-items: center;
+}
+
+.fifth-container .codingarea {
+  width: clamp(390px, 100vw, 580px);
+}
+
+.fifth-container .codingarea img {
+  width: 100%;
+}
+
+.fifth-container .devoptions {
+  margin: 80px auto;
+  width: clamp(390px, 95vw, 1080px);
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.fifth-container .devoptions .option {
+  width: clamp(190px, 44vw, 212px);
+}
+
+.fifth-container .devoptions .option h3 {
+  font-size: 13.71px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.fifth-container .devoptions .option p {
+  font-size: 13.59px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ADBDCC;
+}
+
+.fifth-container .devoptions .option a {
+  font-size: 13.71px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #00D4FF;
+}
+
+
+
+
+
+
+
+
+/* ლაშას სექცია - მეექვსე */
+
+/* Sixth Cotainer ----------------------------------------------------- */
+
+
+.sixth-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sixth-container .launch {
+  margin: 0 auto;
+  width: clamp(390px, 100vw, 1080px);
+}
+
+.sixth-container .launch3 {
+  padding: 16px 0px 24px 0px;
+  color: #635BFF;
+  font-size: 16.88px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.sixth-container h2 {
+  padding: 0px 0px 24px 0px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.sixth-container .launchbar {
+  padding: 0px 0px 24px 0px;
+  font-size: 16.45px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+
+.sixth-container .card h3 {
+  padding: 0px 0px 16px 16px;
+  color: #635BFF;
+  font-size: 16.88px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+
+
+.sixth-container .cardbar {
+  padding: 0px 16px 16px 16px;
+  font-size: 16.45px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.sixth-container a {
+  margin: 0px 0px 0px 16px;
+}
+
+.sixth-container .card3 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.sixth-container .card3 .card {
+  position: relative;
+  padding: 8px;
+  width: 331px;
+  height: 508px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 2px rgba(167, 167, 167, 0.532);
+}
+
+.sixth-container .card3 .card h3 {
+  margin-top: 8px;
+}
+
+.sixth-container .card3 .card .cardlink {
+  position: absolute;
+  bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ლაშას სექცია - მეშვიდე */
+
+/* Seventh Container -------------------------------------------------------- */
+
+.seventh-container {
+  margin-top: 50px;
+  padding: 1px 0px 50px 0px;
+  width: 100%;
+  background-color: rgb(246, 249, 252);
+}
+
+.seventh-container .mainready {
+  width: clamp(390px, 95vw, 1080px);
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+}
+
+.seventh-container h3 {
+  padding: 0px 0px 16px 16px;
+  font-size: 22.13px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.seventh-container .second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seventh-container .ready {
+  width: 496px;
+}
+
+.seventh-container .second1 {
+  width: 248px;
+}
+
+.seventh-container .second p {
+  width: 200px;
+  font-size: 13.59px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.seventh-container .ready p {
+  width: 368px;
+  font-size: 13.59px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.seventh-container button {
+  border-radius: 16px;
+  border: none;
+  width: 111px;
+  height: 33px;
+  background-color: #635BFF;
+  color: #ffffff;
+}
+
+.seventh-container p,
+h4 {
+  padding-bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+/* ლაშას სექცია - ფუტერი */
+
+/* Footer */
+
+.footer {
+  width: 100%;
+ 
+}
+
+.footers {
+  width: clamp(390px, 100vw, 1080px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.footer .column {
+  width: 248px;
+  margin: 16px auto;
+}
+
+.footer .unitedstate {
+  height: 496px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*davit-section*/
+.first-container {
+  /*ჰეადერის შემდეკი სექცია კონტეინერი*/
+  background-color: rgba(249, 252, 249);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1px 0;
+}
+
+.first-container a {
+  color: #635bff;
+}
+
+.container-inside-container {
+  width: 1080px;
+  height: 4427px;
+  margin: 123px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*პირველი არტიკლი*/
+.modular-solutions {
+  /*სექცია კონტეინერის პირველი შვილი*/
+  width: 1080px;
+  /*სიგრძე სიგანე*/
+}
+
+.container {
+  /*კონტენტის სამართავად*/
+  display: flex;
+  /*გვერდი გვერდ დაშორებით*/
+  gap: 5px;
+  width: 1075px;
+  height: 445px;
+}
+
+.modular-solutions h3 {
+  /*სათაური პირველი შვილის */
+  width: 150px;
+  /*სიგრძე სიგანე*/
+  height: 28px;
+  font-weight: 500;
+  /*წრწერის ფონი სტილი და ზომა*/
+  font-size: 16.73px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #635bff;
+  /*ფერი და დაშორება გარედან*/
+  margin-left: 16px;
+}
+
+.to-manage-content {
+  /*სათაური და პარაგრაფის მსობელი*/
+  width: 540px;
+  /*სიგრძე სიგანე*/
+  height: 470px;
+  display: flex;
+  /*სიმაღლეზე ერთმანეთის ქვემოთ დაშორებული 16პხ*/
+  flex-direction: column;
+  gap: 16px;
+}
+
+.to-manage-content h2 {
+  /*კონტენტის სათაურის გასასტილად*/
+  width: 460px;
+  /*სიგრძე სიგანე*/
+  height: 272px;
+  font-weight: 700;
+  /*წრწერის ფონი სტილი და ზომა*/
+  font-size: 51.63px;
+  letter-spacing: -1.12px;
+  color: #0a2540;
+  margin-left: 16px;
+}
+
+.to-manage-content p {
+  /*კონკრეტულად პარაგრაფს*/
+  width: 522px;
+  /*სიგრძე სიგანე*/
+  height: 140px;
+  font-weight: 700;
+  /*წრწერის ფონი სტილი და ზომა*/
+  font-size: 17.58px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #425466;
+  /*ფერი და დაშორება გარედან*/
+  margin-left: 16px;
+}
+
+.icon-container { /*იცონების კონტეინერი მათ სამართავაად*/
+  visibility: hidden;
+  width: 736px;  /*სიმაღლე სიგანე*/
+  height: 588px;
+  display: flex;  /*გაცენტვრაა*/
+  justify-content: center;
+  align-items: center;
+}
+
+.first-pair, 
+.second-pair,
+.first-triplet,
+.quattro,
+.second-triplet,
+.third-pair {
+  width: 122px;  /*სიმაღლე სიგანე*/
+  height: 588px;
+}
+
+.third-pair div:nth-child(1),
+.third-pair div:nth-child(2),
+.second-pair div:nth-child(1),
+.second-pair div:nth-child(2),
+.first-pair div:nth-child(1),
+.first-pair div:nth-child(2) {
+  width: 122px;  /*სიმაღლე სიგანე*/
+  height: 294px;
+  display: flex; /*გაცენტვრაა*/
+  justify-content: center;
+  align-items: center;
+}
+
+.third-pair,
+.second-triplet,
+.first-triplet {
+  display: flex;
+  justify-content: space-between; /*გაცენტვრა და მანძილის გათანაბრება*/
+  align-items: center;
+  flex-direction: column;
+}
+
+.second-triplet div:nth-child(1),
+.second-triplet div:nth-child(2),
+.second-triplet div:nth-child(3),
+.first-triplet div:nth-child(1),
+.first-triplet div:nth-child(2),
+.first-triplet div:nth-child(3) {
+  width: 122px;  /*სიმაღლე სიგანე*/
+  height: 164px;
+  display: flex;  /*გაცენტვრაა*/
+  justify-content: center;
+  align-items: center;
+}
+
+.quattro {
+  display: flex; /*გაცენტვრა და ქვემოთ ჩამოგდება*/
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quattro div:nth-child(1),
+.quattro div:nth-child(2),
+.quattro div:nth-child(3),
+.quattro div:nth-child(4) {
+  width: 122px; /*სიმაღლე სიგანე*/
+  height: 102px;
+}
+
+/*მეორე არტიკლი payments*/
+
+.payments {
+  /*არტიკლის სრულად სამართავად*/
+  width: 1075px;
+  /*სიგრძე სიგანე*/
+  height: 645px;
+  display: flex;
+  /*სიგრძეზე ცენტრში*/
+  align-items: center;
+}
+
+.Container {
+  /*კონტენტის კონტეინერი */
+  width: 540px;
+  /*სიგრძე სიგანე*/
+  height: 477px;
+}
+
+.issuing h2,
+.connectBox h2,
+.Container h2 {
+  /*ამ არტიკლის მთავარი სათაური*/
+  width: 460px;
+  /*სიგრძე სიგანე*/
+  height: 96px;
+  margin: 0 0 24px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 700;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 35.77px;
+  line-height: 48px;
+  letter-spacing: -0.2px;
+  color: #0a2540;
+}
+
+.issuing-h3,
+.connect-h3,
+.box-h3,
+.payments-h3 {
+  /*მესამე დონის სათაური ლოგოსთან ერთად*/
+  width: 140px;
+  /*გავზარდე რათა დატეულიყო სახელიც და ლოგოც*/
+  height: 28px;
+  margin: 0 0 16px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 700;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 17.16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #2e3a55;
+}
+
+.issuing-logo img,
+.connectlogo img,
+.box-logo img,
+.logo img {
+  /*ლოგო სვგ ფორმატში*/
+  width: 20px;
+  /*სიგრძე სიგანე მოშორება მარჯვნიდან*/
+  height: 20px;
+  margin-right: 10px;
+}
+
+.paragraf {
+  /*მოკლე შინარსის სტილისთვის*/
+  width: 460px;
+  /*სიგრძე სიგანე*/
+  height: 84px;
+  font-weight: 700;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 16.59px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #425466;
+  margin: 0 0 24px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+}
+
+/*აერთიანებს paiments billings*/
+.primary {
+  /*ღილაკი*/
+  width: 183.7px;
+  /*სიგრძე სიგანე*/
+  height: 33px;
+  border-radius: 16.5px;
+  background-color: #635bff;
+  border: none;
+  margin: 0 0 56px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  /*წარწერას*/
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 13.48px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.Sa {
+  /*პატარა სათაური*/
+  width: 140px;
+  /*სიგრძე სიგანე*/
+  height: 24px;
+  font-weight: 700;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 14.18px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #0a2540;
+  margin: 0 0 8px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+}
+
+.short-story {
+  /*  */
+  width: 508px;
+  /*სიგრძე სიგანე*/
+  height: 24px;
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 13.71px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0 0 4px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  color: #425466;
+}
+
+.chir-pay {
+  /*შვილის გაცენტვრისთვის*/
+  width: 540px;
+  /*სიგრძე სიგანე*/
+  height: 300px;
+  display: flex;
+  /*გაცენტვრა*/
+  justify-content: center;
+  align-items: center;
+}
+
+.chir-pay img {
+  /*შვილი რომელშიც სვგ ფოტოა ჩაგდებული*/
+  width: 450px;
+  /*სიგრძე სიგანე*/
+  height: 700px;
+  background-size: cover;
+  /*ქავერზე მოსარგებად*/
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*მესამე არტიკლი billing*/
+
+.billing {
+  /*მშობელი კლასი*/
+  width: 1075px;
+  /*სიგრძე სიგანე*/
+  height: 450px;
+  display: flex;
+  /*სიმაღლეზე ცენტრში დაშორებით*/
+  align-items: center;
+  gap: 25px;
+}
+
+.viewBox {
+  /*უბრალობ ყუთი*/
+  width: 540px;
+  height: 401px;
+}
+
+.box-logo {
+  /*ლოგოს და სახელის სტილისთვის*/
+  width: 90px;
+  height: 28px;
+  margin: 0 0 16px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 17.16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #2e3a55;
+}
+
+.viewBox h2 {
+  /*სათაურის სტილისთვის*/
+  width: 460px;
+  /*სიგრძე სიგანე*/
+  height: 48px;
+  margin: 0 0 24px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 700;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 34.88px;
+  line-height: 48px;
+  letter-spacing: -0.2px;
+  color: #0a2540;
+}
+
+.card-container,
+.issuing-img,
+.connect-img,
+.quantum {
+  /*ფოტოსთვის*/
+  width: 511px;
+  /*სიგრძე სიგანე*/
+  height: 400px;
+  background-size: cover;
+  /*ქავერზე მოსარგებად*/
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*მეოთხე არტიკლა connect*/
+
+.connect {
+  /*კონტენტის სამართავად*/
+  width: 1075px;
+  /*სიგრძე სიგანე*/
+  height: 650px;
+  display: flex;
+  /*სიმაღლეზე ცენტრში დაშორებით*/
+  align-items: center;
+  gap: 142px;
+}
+
+.connectBox {
+  /*უბრალოდ ყუთი*/
+  width: 540px;
+  /*სიგრძე სიგანე*/
+  height: 401px;
+}
+
+.connectlogo {
+  /*ლოგო და სატაური*/
+  width: 110px;
+  /*სიგრძე სიგანე*/
+  height: 28px;
+  margin: 0 0 16px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 17.02px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #2e3a55;
+}
+
+/*მეხუთე არტიკლი*/
+.issuing {
+  /*კონტენტის ყუთი*/
+  width: 1075px;
+  /*სიგრძე სიგანე*/
+  height: 449px;
+  display: flex;
+  gap: 86.83px;
+}
+
+.issuing-logo {
+  /*კონტენტის ლოგო და სახელი*/
+  width: 100px;
+  /*სიგრძე სიგანე*/
+  height: 28px;
+  margin: 0 0 16px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 17.02px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #2e3a55;
+}
+
+.isuing-connect {
+  /*ერთ ხაზიანი პარაგრაფი*/
+  width: 508px;
+  /*სიგრძე სიგანე*/
+  height: 24px;
+  font-weight: 500;
+  /*შრიფტის ზომა დაშორება ასოებს შორის ფერი*/
+  font-size: 13.71px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0 0 4px 16px;
+  /*დაშორება მარცხნიდან და ქვემოდან*/
+  color: #425466;
+}
+
+/* რესპონსივი */
+@media(max-width: 1024px) {
+  .container-inside-container {
+    width: 992px; /*სიმაღლეს კონტენტი ასწორებს*/
+  }
+
+  .issuing,
+  .connect,
+  .billing,
+  .payments,
+  .modular-solutions {
+    width: 976px;  /*სიმაღლე სიგანე*/
+    height: 645px;
+  }
+
+  .to-manage-content {
+    width: 470px;  /*სიმაღლე სიგანე*/
+    height: 470px;
+  }
+
+  .modular-solutions h3 {
+    /*სათაური პირველი შვილის */
+    width: 150px;
+    /*სიგრძე სიგანე*/
+    height: 28px;
+    font-weight: 500;
+    /*წრწერის ფონი სტილი და ზომა*/
+    font-size: 16.73px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #635bff;
+    /*ფერი და დაშორება გარედან*/
+    margin-left: 16px;
+  }
+
+  .to-manage-content h2,
+  .to-manage-content p {
+    width: 400px; /*სიმაღლეს კონტენტი ასწორებს*/
+  }
+
+  .card-container {
+    display: block; /*ჩნდება*/
+  }
+
+  .icon-container {
+    visibility: hidden; /*ქრება*/
+  }
+
+  /* payment */
+
+  .Container {
+    width: 370px; /*სიმაღლეს კონტენტი ასწორებს*/
+  }
+
+  .Container h2 {
+    width: 350px; /*სიმაღლეს კონტენტი ასწორებს*/
+  }
+
+  .paragraf {
+    width: 350px; /*სიმაღლეს კონტენტი ასწორებს*/
+  }
+
+  .short-story {
+    width: 385px; /*სიმაღლეს კონტენტი ასწორებს*/
+    font-weight: 500;
+    font-size: 13.71px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 0 0 16px 16px;
+    color: #425466;
+  }
+
+  .pay {
+    width: 540px;  /*სიმაღლე სიგანე*/
+    height: 500px;
+    background-size: cover; /*ქოვერზე მორგებ*/
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .pay img {
+    width: 540px;  /*სიმაღლე სიგანე*/
+    height: 500px;
+  }
+
+  /* biling */
+
+  .viewBox {
+    width: 471px;
+  }
+
+  .issuing-img,
+  .connect-img,
+  .quantum {
+    width: 511px;
+    background-size: cover; /*ქოვერზე მორგებ*/
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .quantum img {
+    width: 540px;  /*სიმაღლე სიგანე*/
+    height: 500px;
+  }
+
+  /* connect */
+
+  .connect {
+    gap: 90px;
+  }
+
+  .connect-img img {
+    width: 330px;  /*სიმაღლე სიგანე*/
+    height: 445px;
+  }
+
+  /* isuing */
+
+  .issuing-img img {
+    width: 485px;
+  }
+}
+
+@media screen and (max-width:950px){
+    .third-container .slide-main .slide-container .slide {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 32px;
+    }
+    .third-container .slide-main .slide-container .slide .slide-head {
+      height: auto;
+    }
+    .third-container .slide-main .slide-container .slide .slide-head .second-cont,
+    .third-container .slide-main .slide-container .slide .slide-head .second-cont .payment-info,
+    .third-container .slide-main .slide-container .slide .slide-head .product-cont .product-used,
+    .third-container .slide-main .slide-container .slide .slide-head .product-cont .slide-payments,
+    .third-container .slide-main .slide-container .slide .slide-head .product-cont .slide-connect {
+      display: none;
+    }
+  
+  
+  .third-container .slide-main .slide-container .slide .slide-head .number {
+    padding-left: 16px;
+    border-left: 1px solid #635BFF;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.92px;
+    letter-spacing: 0.24px;
+    color: #0A2540;
+  }
+  
+  .third-container .slide-main .slide-container .slide .slide-head .company-info {
+    padding-left: 16px;
+    font-size: 13.83px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    color: #425466;
+  }
+  
+  
+  .third-container .slide-main .slide-container .slide .slide-head .product-cont .slide-payments img,
+  .slide-connect img {
+    margin-right: 16px;
+  }
+  
+  .third-container .slide-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+  }
+  
+  .third-container .slide-img img.active {
+    opacity: 1;
+  }
+  .third-container .slide-partner-sites{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .third-container .slide-partner-sites .slide-bmw {
+    width: 25px;
+    height: 1px;
+    position: relative;
+  }
+  .third-container .slide-partner-sites .slide-bmw img{
+    display: none;
+  }
+  .third-container .slide-partner-sites .slide-amazon{
+   width: 25px;
+   height: 1px;
+    position: relative;
+  }
+  .third-container .slide-partner-sites .slide-amazon img{
+    display: none;
+   }
+  .third-container .slide-partner-sites .slide-maersk{
+   width: 25px;
+   height: 1px;
+    position: relative;
+  }
+  .third-container .slide-partner-sites .slide-maersk img{
+   display: none;
+   }
+  
+  .third-container .slide-partner-sites .slide-twilio {
+    width:25px;
+    height: 1px;
+    position: relative;
+  }
+  .third-container .slide-partner-sites .slide-twilio img{
+    display: none;
+  }
+}
+
+
+@media(max-width: 768px) {
+  .container-inside-container {
+    width: 752px;
+    gap: 1px;
+  }
+
+  .issuing,
+  .connect,
+  .billing,
+  .payments,
+  .modular-solutions {
+    width: 736px;  /*სიმაღლე სიგანე*/
+    height: 964px;
+  }
+
+  .payments,
+  .billing,
+  .connect,
+  .issuing,
+  .container {
+    align-items: start; /*მარჯვენა კუთხეში გადადის*/
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .to-manage-content h2,
+  .connect h2,
+  .issuing h2 {
+    width: 460px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    margin: 0 0 0 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+    font-weight: 700;
+    font-size: 35.77px;
+    line-height: 30px;
+    /*შევამცირე*/
+    letter-spacing: -0.3px;
+    color: #0a2540;
+  }
+
+  .connect-h3,
+  .issuing h3 {
+    width: 140px;  /*სიმაღლე სიგანე*/
+    height: 28px;
+    margin: 0 0 6px 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+    font-weight: 700;
+    font-size: 17.16px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #2e3a55;
+  }
+
+  .to-manage-content p,
+  .paragraf {
+    width: 460px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    font-weight: 700;
+    font-size: 16.59px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #425466;
+    margin: 0 0 0 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+  }
+
+  .primary {
+    width: 183.7px;  /*სიმაღლე სიგანე*/
+    height: 33px;
+    border-radius: 16.5px;
+    background-color: #635bff;
+    border: none;
+    margin: 0 0 20px 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+    font-weight: 500;
+    font-size: 13.48px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #fff;
+  }
+
+  .sa {
+    width: 140px;  /*სიმაღლე სიგანე*/
+    height: 24px;
+    font-weight: 700;
+    font-size: 14.18px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #0a2540;
+    margin: 0 0 0 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+  }
+
+  .short-story {
+    height: 24px; 
+    font-weight: 500;
+    font-size: 13.71px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 0 0 0 16px;
+    /*შევამცირე დაშორება ქვემოდან*/
+    color: #425466;
+  }
+
+  .chir-pay,
+  .quantum,
+  .connect-img,
+  .issuing-img {
+    width: 736px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-container { /*იმალება და ადის ზემოთ*/
+    position: absolute; 
+    visibility: hidden;
+  }
+
+  .icon-container {
+    display: flex;
+    visibility: visible;
+    width: 720px;
+    height: 588px;
+    display: flex; /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-container div:nth-child(2),
+  .icon-container div:nth-child(1) {
+    width: 360px; /*სიგანე ენიჭება რათა განალაგოს შიგთავსი ერთმანეთის გვერდით*/
+    display: flex;
+  }
+
+  .first-pair,
+  .second-pair,
+  .first-triplet,
+  .quattro,
+  .second-triplet,
+  .third-pair {
+    flex-direction: column;
+    width: 106px;  /*სიმაღლე სიგანე*/
+    height: 588px; 
+  }
+
+  .third-pair div:nth-child(1),
+  .third-pair div:nth-child(2),
+  .second-pair div:nth-child(1),
+  .second-pair div:nth-child(2),
+  .first-pair div:nth-child(1),
+  .first-pair div:nth-child(2) {
+    width: 106px;  /*სიმაღლე სიგანე*/
+    height: 294px;
+    display: flex;  /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .third-pair,
+  .second-triplet,
+  .first-triplet {
+    display: flex; /*გაცენტვრა და დაშორების გათანაბრება*/
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .second-triplet div:nth-child(1),
+  .second-triplet div:nth-child(2),
+  .second-triplet div:nth-child(3),
+  .first-triplet div:nth-child(1),
+  .first-triplet div:nth-child(2),
+  .first-triplet div:nth-child(3) {
+    width: 106px;  /*სიმაღლე სიგანე*/
+    height: 294px;
+    display: flex; /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quattro {
+    display: flex; /*გაცენტვრა და სიმაღლეზე განლაგება*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .quattro div:nth-child(1),
+  .quattro div:nth-child(2),
+  .quattro div:nth-child(3),
+  .quattro div:nth-child(4) {
+    width: 106px;
+    height: auto; /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+}
+
+@media (max-width: 390px) {
+  .container-inside-container {
+    width: 374px;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    gap: 5px;
+  }
+
+  .modular-solutions,
+  .payments,
+  .billing,
+  .connect,
+  .issuing {
+    width: 374px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+
+  .issuing-box,
+  .connectBox,
+  .viewBox,
+  .container {
+    width: 374px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+
+  .issuing h2,
+  .connectBox h2,
+  .viewBox h2,
+  .payments h2,
+  .container h2 {
+    width: 374px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    margin: 0 0 3px 16px;
+    /*დავამატე დაშორება ქვემოდან*/
+    font-weight: 500;
+    font-size: 35.77px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+    color: #0a2540;
+  }
+
+  .paragraf,
+  .container p {
+    width: 370px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    font-weight: 700;
+    font-size: 16.59px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #425466;
+    margin: 0 0 3px 16px;
+    /*დავამატე დაშორება ქვემოდან*/
+    font-weight: 500;
+  }
+
+  .Container,
+  .to-manage-content {
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+
+  .short-story {
+    width: 370px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    font-weight: 500;
+    font-size: 13.71px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 0 0 3px 16px;
+    /*დავამატე დაშორება ქვემოდან*/
+    font-weight: 500;
+    color: #425466;
+  }
+
+  .issuing-img,
+  .connect-img,
+  .quantum,
+  .chir-pay {
+    width: 374px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .issuing-img img,
+  .quantum img {
+    width: 360px;
+    height: auto;
+    /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+
+  .icon-container {
+    flex-direction: column;
+    visibility: visible;
+    width: 390px;
+    height: auto;  /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    display: flex; /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-pair,
+  .second-pair,
+  .first-triplet,
+  .quattro,
+  .second-triplet,
+  .third-pair {
+    width: 90px;
+    height: auto; /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+
+  .third-pair div:nth-child(1),
+  .third-pair div:nth-child(2),
+  .second-pair div:nth-child(1),
+  .second-pair div:nth-child(2),
+  .first-pair div:nth-child(1),
+  .first-pair div:nth-child(2) {
+    width: 90px;
+    height: auto; /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    display: flex;  /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .third-pair,
+  .second-triplet,
+  .first-triplet {
+    display: flex; /*გაცენტვრა და დაშორების გათანაბრება*/
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .second-triplet div:nth-child(1),
+  .second-triplet div:nth-child(2),
+  .second-triplet div:nth-child(3),
+  .first-triplet div:nth-child(1),
+  .first-triplet div:nth-child(2),
+  .first-triplet div:nth-child(3) {
+    width: 90px;
+    height: auto; /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+    display: flex; /*გაცენტვრა*/
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quattro {
+    display: flex; /*გაცენტვრა და სიმაღლეზე განლაგება*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .quattro div:nth-child(1),
+  .quattro div:nth-child(2),
+  .quattro div:nth-child(3),
+  .quattro div:nth-child(4) {
+    width: 90px;
+    height: auto; /*გადავიყვანე აუტოზე რათა განსაზღვრულიყო ავტომატურად*/
+  }
+}
+
+
+
+
+
+
+
+/* ---- RESPONSIVE ---- */
+
+@media screen and (max-width: 1022px) {
+  header {
+    display: none;
+  }
+
+  header.active {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    z-index: 98;
+  }
+
+  header .header-icon img {
+    display: block;
+  }
+
+  header .header-icon.active {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px dashed gray;
+  }
+
+
+  header .header-icon img {
+    filter: invert(30%);
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header nav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header nav ul li {
+    justify-content: flex-start;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px dashed gray;
+  }
+
+  header a {
+    color: black;
+  }
+
+  header .btns {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  header .btns .contact.active {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px dashed gray;
+  }
+
+  header .btns .contact strong {
+    display: none;
+  }
+
+  header .btns .sign-in.active {
+    background-color: #635bff;
+    color: #ffffff;
+  }
+
+  .resp-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 99;
+  }
+
+  .resp-btn #burger-button {
+    display: block;
+    color: #ffffff;
+  }
+
+  .second-container .global-scale-main-container .global-scale-container {
+    grid-template-columns: repeat(2, auto);
+  }
+ 
+  
+  /* ლაშას სექციისთვის */
+  .seventh-container .mainready {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .sixth-container .card3 {
+    row-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .footers {
+    grid-template-columns: repeat(2, auto);
+  }
+  .fifth-container .devoptions {
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  }
+  .fifth-container .devcodarea {
+    flex-direction: column;
+  }
+  .forth-container .textarea {
+    margin: 0 auto;
+  }
+
+}
+
+
+
+@media screen and (max-width: 890px) {
+  .section-container .stripe .email-and-contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin-left: -18px;
+  }
+  .section-container .stripe .email-and-contact .email-address input {
+    display: none;
+  }
+
+  .section-container .stripe .email-and-contact .email-address button {
+    position: relative;
+    left: 0;
+  }
+
+  .section-container .stripe .resp-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 111px;
+    height: 33px;
+    white-space: nowrap;
+  }
+
+  .section-container .stripe .resp-contact a {
+    text-decoration: none;
+    color: #0A2540;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .section-container .stripe {
+    width: 368px;
+  }
+
+}
+
+/* ლაშას სექცია  */
+@media screen and (max-width: 766px) {
+  .sixth-container .card3 {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  .forth-container .banners {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .second-container .global-scale-main-container .global-scale-container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sites-section {
+    width: clamp(347px, 18vw, 668px);
+    height: 340px;
+    margin: 73px auto;
+  }
+
+
+
+  .sites-section .sites-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .sites-section .sites-container .sites {
+    align-items: center;
+  }
+
+  .sites-section .sites-container .sites .icon {
+    width: clamp(170px, 35vw, 370px);
+  }
+
+  .sites-section .sites-container .bottom-sites .icon {
+    width: clamp(170px, 35vw, 370px);
+  }
+
+  .second-container .global-scale-main-container .global-scale-container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+
+/* ლაშას სექციისთვის */
+@media screen and (max-width: 500px) {
+    .seventh-container .mainready .second {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .footers {
+      grid-template-columns: repeat(1, auto);
+    }
+}
+
+@media screen and (max-width: 414px) {
+  .section-container .stripe .about-stripe {
+    max-width: 400px;
+  }
+}

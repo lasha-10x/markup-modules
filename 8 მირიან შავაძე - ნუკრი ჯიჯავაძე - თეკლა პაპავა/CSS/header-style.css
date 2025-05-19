@@ -1,0 +1,125 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(320px, 90%, 1080px);
+    margin: auto;
+    color: white;
+    position: sticky;
+    padding: 24px 16px;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navigation-menu {
+    display: flex;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+@media (max-width: 732px) {
+    .navigation-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        border-radius: 8px;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .navigation-menu ul {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cta-buttons {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .navigation-menu.open {
+        display: flex;
+    }
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 16px;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-menu ul li {
+    padding: 8px 20px;
+}
+
+/* CTA buttons styles */
+
+.cta-buttons {
+    padding-top: 8px;
+    align-content: center;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    color: white;
+}
+
+.cta-buttons a:first-child {
+    margin-right: 20px;
+    align-content: center;
+}
+
+header .cta-buttons a:last-child {
+    background-color: white;
+    color: orange;
+    padding: 6px 16px;
+    border-radius: 16px;
+}
+
+.logo img {
+    padding-top: 8px;
+}

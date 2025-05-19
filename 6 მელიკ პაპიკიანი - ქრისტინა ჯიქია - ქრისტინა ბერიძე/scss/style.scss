@@ -1,0 +1,49 @@
+@import "./null";
+@import "./fonts";
+
+/*sections*/
+@import "./markup-styles/header"; 
+@import "./markup-styles/sec-1-financial";
+@import "./markup-styles/sec-2-products";
+@import "./markup-styles/sec-3-payments";
+@import "./markup-styles/sec-4-billing";
+@import "./markup-styles/sec-5-connect";
+@import "./markup-styles/sec-6-issuing";
+@import "./markup-styles/sec-7-commerce";
+@import "./markup-styles/sec-8-enterprise";
+@import "./markup-styles/sec-9-startup";
+@import "./markup-styles/sec-10-powerful";
+
+
+.lines {
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body.lock {
+        overflow-y: hidden;
+    }
+}
+
+body {
+    font-family: "Inter", serif;
+    font-size: 14px;
+    /*font-family: "Source Code Pro", serif; */
+    /* font-family: 'NimbusMono-Regular'; */
+
+}
+
+
+.container {
+    max-width: 1084px;
+    padding: 0px 16px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+

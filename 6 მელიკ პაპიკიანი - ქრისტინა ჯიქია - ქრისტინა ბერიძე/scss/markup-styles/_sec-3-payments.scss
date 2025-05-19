@@ -1,0 +1,254 @@
+@mixin itemSize($fw, $fs, $lh, $ls, $color) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $color;
+}
+
+.payments {
+    background-color: #F6F9FC;
+
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 150px;
+    }
+
+    &__globally {
+        /* padding-top: 70px; */
+        z-index: 1;
+    }
+
+    &__card {
+        padding-right: 121px;
+    }
+
+    &__globally-tagline {
+        display: flex;
+        align-items: center;
+        gap: 12.5px;
+        margin-bottom: 16px;
+    }
+
+    &__globally-tagline img {
+        width: 15px;
+        height: 20px;
+    }
+
+    &__globally-tagline span {
+
+        @include itemSize(500, 17px, 28px, .2px, #2E3A55);
+    }
+
+    &__title {
+        @include itemSize(700, 36px, 48px, -0.2px, #0A2540);
+        margin-bottom: 24px;
+        max-width: 360px;
+    }
+
+    &__subtitle {
+        @include itemSize(700, 17px, 28px, 0.2px, #425466);
+        margin-bottom: 24px;
+        max-width: 455px;
+    }
+
+    &__btn {
+
+        @include itemSize(500, 13.5px, 24px, 0.2px, #FFFFFF);
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        padding: 3px 15px 3px 16px;
+        border-radius: 99px;
+        background-color: #635BFF;
+        font-family: "Inter", serif;
+        cursor: pointer;
+        margin-bottom: 56px;
+    }
+
+    &__btn:active {
+        scale: .99;
+    }
+
+    &__globally dl dt {
+        @include itemSize(700, 14px, 24px, -0.2px, #0A2540);
+        padding-top: 8px;
+    }
+
+    &__globally dl dd {
+        @include itemSize(500, 14px, 24px, 0.2px, #425466);
+    }
+
+    &__globally dl span {
+        color: #635BFF;
+        cursor: pointer;
+    }
+
+    &__globally dl .radar {
+        font-weight: 700;
+    }
+
+    &__globally dl dd:not(:last-child) {
+        padding-bottom: 4px;
+    }
+
+    .payments-price {
+        color: #0A2540;
+        font-weight: 500;
+        letter-spacing: 0.013rem;
+        padding-bottom: 10px;
+        font-size: 11px;
+    }
+
+    .payments-descr {
+        color: #425466;
+        padding-bottom: 10px;
+    }
+
+    &__method {
+        height: 1px;
+    }
+
+    &-logo {
+        padding-bottom: 10px;
+    }
+
+    &-logo img {
+        width: 72px;
+        height: 72px;
+        border-radius: 7px;
+    }
+
+    .card-pay {
+        background-color: #33DDB3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", serif;
+    }
+
+    .card-pay span {
+        position: relative;
+    }
+
+    .card-pay span::after {
+        content: '';
+        position: absolute;
+        width: 0.053rem;
+        height: 90%;
+        background-color: #727F96;
+        left: -0.55rem;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .3;
+    }
+
+    .card-pay span {
+        margin-right: 8px;
+        color: #1D3944;
+        font-weight: 500;
+    }
+
+    .card-pay img:nth-of-type(1) {
+        width: 27px;
+        height: 11px;
+        margin-right: 16px;
+    }
+
+    .card-pay img:nth-of-type(2) {
+        width: 10px;
+        height: 11px;
+    }
+
+
+
+    @media (max-width: 1440px) {
+        .financial__card-body {
+            display: none;
+        }
+
+        .payments__method {
+            display: none;
+        }
+
+        .commerce .commerce__img img {
+            width: 727px;
+            height: auto;
+        }
+    }
+
+
+    @media (max-width: 1024px) {
+
+
+
+        .financial__card-body {
+            display: block;
+        }
+
+        .payments__method {
+            display: block;
+        }
+
+        .payments__subtitle {
+            max-width: 430px;
+        }
+
+    }
+
+    @media (max-width: 840px) {
+        .payments__items {
+            display: block;
+        }
+
+        .payments__title {
+            max-width: 100%;
+        }
+
+        .payments__subtitle {
+            max-width: 100%;
+        }
+
+        .payments__btn {
+            margin-bottom: 30px;
+        }
+
+        .payments__card {
+            padding-right: 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .payments__globally {
+            padding-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .products__line-decore div:nth-child(1) {
+            display: none;
+        }
+
+        .products__line-decore div:nth-child(2) {
+            display: none;
+        }
+
+        .products__line-decore div {
+            flex: 0 1 50%;
+        }
+
+        .payments__items {
+            padding-bottom: 70px;
+        }
+
+    }
+
+    @media (max-width: 570px) {
+        .products__line-decore div {
+            display: none;
+        }
+    }
+
+}

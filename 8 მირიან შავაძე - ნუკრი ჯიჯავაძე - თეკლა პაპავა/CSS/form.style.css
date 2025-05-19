@@ -1,0 +1,252 @@
+.payments-wrapper{
+    display: flex;
+    margin-top: 250px;
+    width: clamp(300px, 80%, 1080px);
+    gap: 120px;
+    justify-content: space-around;
+}
+
+
+
+.payments-wrapper .mobile-phone {
+    width: 270px;
+    /* height: 537px; */
+    padding: 8px;
+    border-radius: 36px;
+    background: #f6f9fc;
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
+    /* position: absolute; */
+    top: 60px;
+    z-index: 2;
+}
+
+.payments-wrapper .phone-screen form {
+    height: 100%;
+    padding: 24px 16px;
+    border-radius: 28px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 300px;
+    letter-spacing: .2px;
+}
+
+.top-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abstraction-magazine{
+    border-radius: 6px;
+}
+
+
+.top-part img, .top-part h4 {
+    margin-bottom: 4px;
+    width: 70px;
+}
+
+
+.top-part h4{
+    width: 73px;
+}
+
+
+.pay-containter p, .top-part h4{
+    /* width: 73px; */
+    font-family: inter;
+    font-size: .6rem;
+    line-height: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    color: gray;
+}
+
+.top-part p {
+    font-family: inter;
+    margin-bottom: 18px;
+    /* color: #425466; */
+}
+
+.apple-pay {
+    background-color: black;
+    color: white;
+    font-family: inter;
+    font-weight: 400;
+    font-size: .8rem;
+    width: 100%;
+    height: 29px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 0;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px -1px rgba(50, 50, 93, .25), 0 1px 3px -1px rgba(0, 0, 0, .3)
+}
+
+.pay-faster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #32ddb3;
+    color: black;
+    font-family: inter;
+    font-weight: 400;
+    font-size: .8rem;
+    width: 100%;
+    height: 29px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 0;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px -1px rgba(50, 50, 93, .25), 0 1px 3px -1px rgba(0, 0, 0, .3);
+    align-content: center;
+}
+
+
+.apple-pay{
+    padding: 6px 0;
+}
+
+.apple-pay img{
+    width: 32px;
+    margin-top: 2px;
+}
+
+
+
+.pay-faster img:first-child{
+    width: 30px;
+    margin: auto 0;
+    border-right: 1px solid gray;
+    padding-right: 5px;
+}
+.pay-faster img:last-child{
+    width: 10px;
+    height: 10px;
+    margin: auto 0;
+}
+
+.top-part p:last-child {
+    width: 101.88px;
+    height: 10.98px;
+    font-family: inter;
+    font-weight: 400;
+    font-size: .8rem;
+    /* margin-left: 100.7px; */
+    margin-bottom: 14px;
+    color: rgba(114, 127, 150, 1);
+    
+}
+.pay-containter{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 64px 100px 64px;
+}
+
+.pay-containter div:first-child{
+    width: 64px;
+    height: 1px;
+    background-color: #E7ECF1;
+}
+
+.pay-containter div:last-child{
+    width: 64px;
+    height: 1px;
+    background-color: #E7ECF1;
+}
+
+.pay-containter p{
+    margin: auto auto;
+}
+
+
+/* bottom part of payment form */
+.bottom-part input,
+.bottom-part div {
+    width: 100%;
+}
+
+.bottom-part input {
+    border: none;
+    box-shadow: 0 0 0 1px rgba(50, 50, 93, .07), 0 2px 3px -1px rgba(50, 50, 93, .12), 0 1px 3px -1px rgba(0, 0, 0, .12);
+}
+
+.bottom-part label {
+    color: #425466;
+    font-size: .6rem;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+.email-input {
+    margin-bottom: 16px;
+    margin-top: 6px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(50, 50, 93, .07), 0 2px 3px -1px rgba(50, 50, 93, .12), 0 1px 3px -1px rgba(0, 0, 0, .12);
+}
+
+/* Card info inputs */
+.card-numbers-input,
+.location-input {
+    margin-top: 6px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.years-cvc-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    border-top: none;
+    box-shadow: 0 0 0 1px rgba(50, 50, 93, .07), 0 2px 3px -1px rgba(50, 50, 93, .12), 0 1px 3px -1px rgba(0, 0, 0, .12);
+}
+
+.years-cvc-wrapper input:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+.years-cvc-wrapper input:last-child {
+    border-bottom-right-radius: 4px;
+}
+
+
+/* location and zip inputs */
+.location-input {
+    width: 100%;
+    height: 24px;
+    padding: 0 4px;
+    font-size: .6rem;
+    font-weight: 500;
+    line-height: 24px;
+    border: none;
+    color: #62788D;
+    box-shadow: 0 0 0 1px rgba(50, 50, 93, .07), 0 2px 3px -1px rgba(50, 50, 93, .12), 0 1px 3px -1px rgba(0, 0, 0, .12);
+}
+
+.zip-input-container {
+    margin-bottom: 24px;
+}
+
+.zip-input-container input {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+input {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 8px;
+    color: #62788D;
+}
+
+.bottom-part .apple-pay {
+    margin-bottom: 33px;
+}
+
+.apple-pay.color{
+    background-color: #0A2540;
+}
+

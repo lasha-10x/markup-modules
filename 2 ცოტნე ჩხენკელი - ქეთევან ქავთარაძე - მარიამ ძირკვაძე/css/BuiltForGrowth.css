@@ -1,0 +1,173 @@
+@import url(../css/reset.css);
+
+section.built-for-growth {
+    display: flex;
+    width: 100vw;
+    /* height: 100vh; */
+    justify-content: center;
+    background-color: #F6F9FC;
+}
+
+.content-wrapper{
+    width: 1080px;
+
+    & .growth-text_wrapper {
+        width: clamp(340px, 100%, 662px);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, 3vw, 24px);
+        margin-top: clamp(70px, 5vw, 128px);
+        /* padding: 0 20px 0 20px; */
+    }
+
+    & span {
+        color: #635BFF;
+        font-size: 16px;
+        font-family: inter;
+        font-weight: 400;
+        padding: 0 20px 0 20px;
+    }
+
+    & h3 {
+        color: #0A2540;
+        font-size: clamp(30px, 3vw, 34px);
+        font-family: inter;
+        font-weight: bold;
+        padding: 0 20px 0 20px;
+    }
+    & .growth-text_wrapper > p {
+        color: #425466;
+        font-size: 16px;
+        line-height: clamp(20px, 2vw, 28px);
+        font-family: inter;
+        font-weight: 400; 
+        padding: 0 20px 0 20px;
+    }
+}
+
+.growth-cards_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 32px;
+        margin-top: 100px;
+    
+    & .card-holder {
+        position: relative;
+        width: clamp(350px, 44vw, 508px);
+        height: clamp(433px, 49vw, 533px);
+        background-color: white; 
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin: 0 20px 0 20px;
+        margin-bottom: 32px; 
+        box-shadow: 0px 20px 34px -7px rgb(0 0 0 / 35%);
+
+    }
+    /* & .card-window {
+        border: 4px solid white;
+    } */
+    & .card-holder > img {
+        position: absolute;
+        top: 0;
+        margin: 4px 4px 0 4px;
+        width: clamp(340px, 43vw, 500px);
+        height: clamp(233px, 28vw, 333px);
+
+    }
+
+    & .card-holder:first-child {
+        margin-top: 130px;
+    }
+
+    & .card-holder:last-child {
+        margin-top: -130px;
+    }
+
+    & .card-content_holder {
+        padding: clamp(25px, 3vw, 32px);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, 2vw, 20px);
+        
+        
+        & > .icon-wrapper {
+            background-color: #F6F9FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 110px;
+            border-radius: 4px;
+            /* padding: 12px; */
+            gap: 10px;
+        }
+        & .icon-wrapper  > p {
+            color: #2E3A55;
+            font-size: 14px;
+            font-family: inter;
+            font-weight: 400; 
+        }
+    }
+    & .card-content_holder > h4 {
+        color: #0A2540;
+        font-size: clamp(18px, 2vw, 24px);
+        font-family: inter;
+        font-weight: bold; 
+        margin: 0;
+        max-width: fit-content;
+    }
+
+    & .card-content_holder > p {
+        color: #425466;
+        font-size: clamp(14px, 2vw, 17px);
+        font-family: inter;
+        font-weight: 400; 
+        line-height: clamp(20px, 1vw, 28px);
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .growth-cards_wrapper {
+        gap: 0;
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        /* gap: 100px; */
+    }
+    .growth-cards_wrapper .card-holder{
+        margin-bottom: 0;
+    }
+
+    .growth-cards_wrapper .card-holder:first-child {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .growth-cards_wrapper .card-holder:last-child {
+        margin-top: 20px;
+    }
+    .growth-cards_wrapper .card-holder {
+        /* width: clamp(90%, 5%, 100%); */
+
+    }
+    .growth-cards_wrapper .card-holder > img {
+        width: 98%;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .global-scale-wrapper .text-holder {
+        /* margin: 60px; */
+    } 
+}
+
+@media only screen and (max-width: 390px) {
+    .global-scale-wrapper .text-holder {
+        /* margin: 60px; */
+    } 
+}

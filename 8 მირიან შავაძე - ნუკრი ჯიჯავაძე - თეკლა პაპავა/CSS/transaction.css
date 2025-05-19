@@ -1,0 +1,188 @@
+.transaction-container {
+    width: 331px;
+    /* height: 516.74px; */
+    background: rgba(255, 255, 255, 1);
+    padding: 20px;
+    border: 1.19px solid rgba(196, 204, 216, 1);
+    border-radius: 10px;
+}
+
+.transaction, .transaction2{
+    width: 290.52px;
+    height: 73.82px;
+    padding: 22.62px 20.24px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.transaction-wrapper {
+    position: relative;
+}
+
+.transaction2{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+    position: absolute;
+}
+.transaction {
+    width: 261px;
+}
+
+.transaction {
+    padding: 14px;
+}
+
+.transaction {
+    position: absolute;
+    top: 10px;
+    /* left: 15px; */
+}
+
+
+
+.processing p:first-child{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.processing span{
+    color: rgba(114, 127, 150, 1);
+    font-family: inter;
+}
+
+
+.processing p:last-child {
+    width: 70px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: .5rem;
+    font-weight: 500;
+    background-color: #B9EBCB;
+}
+
+.cost{
+    font-family: inter;
+    font-weight: 400;
+    color: rgba(63, 75, 102, 1);
+}
+
+
+
+.two-par p:first-child{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+.two-par p:last-child {
+    width: 70px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: .5rem;
+    font-weight: 500;
+    background-color: #B9EBCB;
+}
+
+.sequence {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    top: 120px;
+    /* width: 100%; */
+    z-index: 2;
+    /* background-color: red; */
+}
+
+.tre {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;   /* Invisible left border */
+    border-right: 5px solid transparent;  /* Invisible right border */
+    border-top: 8px solid blue;           /* Blue top border to form the triangle */
+    margin-bottom: 6px;
+}
+
+.tre:last-child {
+    margin-bottom: 0;
+}
+
+.sequence p {
+    font-size: .8rem;
+    margin: 2px;
+    padding: 8px 26px;
+    border-radius: 16px;
+}
+
+.buyers {
+    background-color: #0073E6;
+    color: white;
+}
+
+.platform-p{
+    background-color: #3DC9C9;
+    color: white;
+}
+
+.price {
+    background-color: white;
+    box-shadow: 0px 3.57px 8.33px -3.57px rgba(0, 0, 0, 0.3),
+    0px 7.14px 14.29px -2.38px rgba(50, 50, 93, 0.25);
+    font-family: inter;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 17.86px;
+    letter-spacing: 0.26px;
+    text-align: center;
+}
+
+.par-div {
+    outline: 1px dashed #CFD7DF;
+    border-radius: 16px;
+}
+.sellers {
+    background-color: #0CC2FF;
+    color: white;
+}
+
+.paragraph-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 18px;
+    margin-left: 108px;
+}
+
+.paragraph-wrapper p:last-child {
+    box-shadow: 0px 3.57px 8.33px -3.57px rgba(0, 0, 0, 0.3),
+    0px 7.14px 14.29px -2.38px rgba(50, 50, 93, 0.25);
+}
+
+.ellipse {
+    width: 100px;
+    height: 150px;
+    position: relative;
+    bottom: 170px;
+    left: 95px;
+    background-color: #C4CCD8;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: .2;
+}
+
+@media (max-width: 1080px) {
+    .sequence .paragraph-wrapper{
+        margin-left: 0; */
+    }
+}
+
+
+
+
+

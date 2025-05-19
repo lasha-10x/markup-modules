@@ -1,0 +1,105 @@
+@media only screen and ( max-width: 768px ){
+    .advertisment-item{
+        width: 100% !important;
+        padding: 0 20px;
+    }
+    .on-column-header >img{
+        width: 100%;
+    }
+    .on-column-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ){
+    .on-column-header >img{
+        max-width: 320px;
+    }
+}
+
+@media only screen and ( max-width: 390px ){
+
+    .advertisment-item {
+        padding: 10px;
+        margin: 0;
+    }
+    .on-column-header > img {
+        max-width: 280px;
+        height: auto;
+    }
+    .on-column-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.on-footer-logo{
+    color: #635BFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.055rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+}
+
+.on-footer-h2{
+    color: #0A2540;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2356rem;
+    line-height: 3rem;
+    letter-spacing: -0.0125rem;
+}
+
+.on-footer-p{
+    color: #425466;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0281rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+}
+
+.on-column-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5069rem;
+    margin: 0rem 0.4831rem 0.7981rem 0.4831rem;
+    cursor: pointer;
+    margin-top: 4rem;
+}
+
+.advertisment-item{
+    width: 33.3%;
+    height: 528.41px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 26px -15px;
+}
+
+.footerh3{
+    color: #0A2540;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin: 23.49px 24px 0px 24px;
+}
+
+.footer-pp{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0106rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+    margin: 12.23px 24px 84px 24px;
+    & > a {
+        text-decoration: none;
+    }
+}
+
+.on-column-wrapper > div:hover{
+    background-color: #9966ff0f;
+    transform: scale(1.03);
+    transform: translateY(-5px);
+    transition: .3s ease;
+}

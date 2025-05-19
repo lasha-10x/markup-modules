@@ -1,0 +1,283 @@
+@media( max-width: 768px ){
+    .on-footer2{
+        flex-direction: column;
+    }
+    .payment-description-wrapper{
+        margin-top: 15px;
+    }
+}
+
+@media( max-width: 390px ){
+    .on-footer2{
+        flex-direction: column;
+    }
+    .payment-description-wrapper{
+        margin-top: 15px;
+    }
+}
+
+
+.on-footer2{
+    background: rgb(246,249,252);
+    background: linear-gradient(0deg, rgba(246,249,252,1) 0%, rgba(246,249,252,1) 29%, rgba(252,253,254,0.6487045501794468) 72%, rgba(254,254,255,0.5506653344931722) 88%, rgba(255,255,255,0.5450630935968137) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    padding-top: 7.5rem;
+    padding-bottom: 10.9375rem;
+}
+.footer-payment-wrapper{
+    max-width: 412px;
+    height: 112px;
+}
+
+.footer-payment-wrapper{
+    font-weight: 500;
+    font-size: 1.3831rem;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 2rem;
+    letter-spacing: 0.1px;
+}
+
+.footer-payment-p{
+    font-weight: 500;
+    font-size: 1.0281rem;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.75rem;
+    letter-spacing: 0.2px;
+    margin: 1.5rem 0rem;
+    & > a{
+        text-decoration: none;
+    }
+}
+
+.payment-links-wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    & > a{
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.8719rem;
+        font-family: 'DM Sans', sans-serif;
+        line-height: 1.5rem;
+        letter-spacing: 0.0125rem;
+        position: absolute;
+        top: -0.5rem;
+        left: 7.8125rem;
+    }
+
+    & img{
+        position: absolute;
+        right: 10.3125rem;
+        bottom: 0.75rem;
+    }
+}
+
+.start-payment-btn{
+    max-width: 111.64px;
+    height: 33px;
+    position: relative;
+    padding: 3px 26px 6px 16px;
+    border: 0.0625rem;
+    border-radius: 1.0313rem;
+    background: #635BFF;
+    color: #F6F9FC;
+    font-size: 0.835rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
+
+    & > img{
+        position: absolute;
+        top: 0.5625rem;
+        right: 0.75rem;
+    }
+}
+
+.payment-description-wrapper{
+    gap: 4.1875rem;
+    display: flex;
+    margin-top: 6.5625rem;
+}
+
+.payment-description{
+    &  h3{
+        font-size: 0.8788rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.0125rem;
+        color: #0A2540;
+        margin: 8px 0px 8px 16px;
+    }
+
+    &  p{
+        font-size: 0.8569rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.0125rem;
+        color: #425466;
+        margin: 8px 0px 8px 16px;
+    }
+}
+
+.description-header{
+    position: relative;
+    & > img:nth-child(1){
+        position: absolute;
+        top: -2.25rem;
+        left: -0.75rem;
+    }
+    & > img:nth-child(2){
+        position: absolute;
+        top: -3.8125rem;
+        left: 2.5625rem;
+    }
+}
+
+.payment-last-link{
+    position: relative;
+    & > a{
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.8569rem;
+        font-family: 'DM Sans', sans-serif;
+        line-height: 1.5rem;
+        letter-spacing: 0.0125rem;
+        color: #635BFF;
+    }
+    
+    & > img{
+        position: absolute;
+        bottom: 0.375rem;
+        right: 4.6875rem;
+    }
+}
+
+.description-header2{
+    position: relative;
+    & > img:nth-child(1){
+        position: absolute;
+        top: -3.3125rem;
+        left: 3.0625rem;
+        z-index: 1;
+        opacity: .73;
+    }
+    & > img:nth-child(2){
+        position: absolute;
+        top: -3.75rem;
+        left: 2.6875rem;
+    }
+}
+
+@media only screen and ( max-width: 768px ){
+    .advertisment-item{
+        width: 100% !important;
+        padding: 0 20px;
+    }
+    .on-column-header >img{
+        width: 100%;
+    }
+    .on-column-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ){
+    .on-column-header >img{
+        max-width: 320px;
+    }
+}
+
+@media only screen and ( max-width: 390px ){
+
+    .advertisment-item {
+        padding: 10px;
+        margin: 0;
+    }
+    .on-column-header > img {
+        max-width: 280px;
+        height: auto;
+    }
+    .on-column-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.on-footer-logo{
+    color: #635BFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.055rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+}
+
+.on-footer-h2{
+    color: #0A2540;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2356rem;
+    line-height: 3rem;
+    letter-spacing: -0.0125rem;
+}
+
+.on-footer-p{
+    color: #425466;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0281rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+}
+
+.on-column-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5069rem;
+    margin: 0rem 0.4831rem 0.7981rem 0.4831rem;
+    cursor: pointer;
+    margin-top: 4rem;
+}
+
+.advertisment-item{
+    width: 33.3%;
+    height: 528.41px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 26px -15px;
+}
+
+.footerh3{
+    color: #0A2540;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin: 23.49px 24px 0px 24px;
+}
+
+.footer-pp{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0106rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0125rem;
+    margin: 12.23px 24px 84px 24px;
+    & > a {
+        text-decoration: none;
+    }
+}
+
+.on-column-wrapper > div:hover{
+    background-color: #9966ff0f;
+    transform: scale(1.03);
+    transform: translateY(-5px);
+    transition: .3s ease;
+}

@@ -1,0 +1,275 @@
+@mixin billing-fontsize($fw, $fs, $lh, $color) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+/*1*/
+
+.billing {
+    background-color: #F6F9FC;
+    /* padding-bottom: 571px; */
+
+
+    &__revenue {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__quantum {
+        z-index: 1;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 150px;
+    }
+
+    &-title {
+        max-width: 460px;
+    }
+
+    &-subtitle {
+        @include billing-fontsize(500, 16.5px, 28px, #425466);
+        letter-spacing: 0.2px;
+        max-width: 450px;
+        margin-bottom: 24px;
+    }
+
+    .products__line-decore div:not(:last-child) {
+        height: 26%;
+    }
+
+
+    .payments__globally dl .radar {
+        font-weight: 400;
+    }
+
+    .quantum {
+        background-color: #fff;
+        box-shadow: 0px 40.5556px 81.1111px -16.2222px rgba(50, 50, 93, 0.25), 0px 24.3333px 48.6667px -24.3333px rgba(0, 0, 0, 0.3);
+        border-radius: 7px;
+        width: 438px;
+        height: 100%;
+        /* padding: 12px 7.7px 17.5px 7.7px; */
+        font-family: "Inter", serif;
+        z-index: 1;
+        margin-right: 44px;
+        margin-top: 25px;
+    }
+
+
+    .quantum__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 43px;
+        border-bottom: 1px solid #E7ECF1;
+        padding: 0px 23px;
+    }
+
+    .quantum__logo {
+        @include billing-fontsize(500, 10px, 17px, #3F4B66);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .quantum__header-list ul {
+        @include billing-fontsize(500, 8px, 11px, #3F4B66);
+        display: flex;
+        align-items: center;
+    }
+
+    .quantum__header-list ul li:not(:last-child) {
+        margin-right: 14px;
+    }
+
+    .quantum__items {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 7.7px 12px 7.7px;
+    }
+
+    .quantum__item {
+        padding: 18px 14px 5px 14px;
+    }
+
+    .quantum__items .quantum__item.active {
+        background-color: #F6F9FC;
+        border-radius: 6.5px;
+    }
+
+    .quantum__item-title {
+        @include billing-fontsize(500, 11px, 17px, #3F4B66);
+        margin-bottom: 6px;
+    }
+
+    .quantum__item-subtitle {
+        @include billing-fontsize(500, 8.2px, 13px, #3F4B66);
+        margin-bottom: 6px;
+    }
+
+    .quantum__item-price {
+        @include billing-fontsize(500, 8.3px, 11px, #3F4B66);
+        margin-bottom: 19.5px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .quantum__item-price span {
+        @include billing-fontsize(500, 17.2px, 25px, #3F4B66);
+    }
+
+    .quantum__item button {
+        background-color: #9966FF;
+        border-radius: 3.2px;
+        padding: 8px 34px 8px 34px;
+        font-weight: 500;
+        font-size: 8.3px;
+        color: #fff;
+        font-family: "Inter", serif;
+        margin-bottom: 17px;
+        cursor: pointer;
+    }
+
+    .quantum__item button:active {
+        scale: .98;
+    }
+
+    .quantum__item dl dt {
+        @include billing-fontsize(500, 8.2px, 13px, #3F4B66);
+        margin-bottom: 8.1px;
+    }
+
+    .quantum__item dl dd {
+        display: flex;
+        gap: 7.3px;
+        @include billing-fontsize(500, 8px, 11px, #3F4B66);
+        align-items: flex-start;
+    }
+
+    .quantum__item dl dd {
+        margin-bottom: 8px;
+    }
+
+    .quantum__item .quantum__item-title {
+        position: relative;
+    }
+
+    .quantum__item .quantum__item-title span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #9966FF;
+        font-weight: 500;
+        font-size: 5.5px;
+        width: 32px;
+        height: 13px;
+        position: absolute;
+        top: -2px;
+        right: 11px;
+        background-color: #e4dbfd;
+        border-radius: 8px;
+    }
+
+
+
+
+    @media (max-width: 970px) {
+        .billing__items {
+            display: block;
+        }
+
+        .billing-title {
+            max-width: 100%;
+        }
+
+        .billing-subtitle {
+            max-width: 100%;
+        }
+
+        .payments__btn {
+            margin-bottom: 30px;
+        }
+
+        .quantum {
+            margin: 0px auto 0px auto;
+            width: unset;
+            max-width: 480px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .payments__globally {
+            margin-bottom: 30px;
+        }
+
+        .products__line-decore div:not(:last-child) {
+            height: 42%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .products__line-decore div:nth-child(1) {
+            display: none;
+        }
+
+        .products__line-decore div:nth-child(2) {
+            display: none;
+        }
+
+        .products__line-decore div {
+            flex: 0 1 50%;
+
+        }
+
+        &__items {
+            padding-bottom: 70px;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .products__line-decore div {
+            display: none;
+        }
+    }
+
+    @media (max-width: 460px) {
+
+        .quantum__item {
+            padding: 18px 7px 5px 7px;
+        }
+
+        .billing .btn__cover {
+            text-align: center;
+        }
+    }
+
+
+    @media (max-width: 440px) {
+        .quantum__item {
+            padding: 18px 2px 5px 2px;
+        }
+    }
+
+    @media (max-width: 416px) {
+        .quantum__items {
+            padding: 10px 3px 12px 3px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        .quantum__item button {
+            padding: 8px 25px 8px 25px;
+        }
+
+        .quantum__item .quantum__item-title span {
+            top: -10px;
+        }
+    }
+
+}

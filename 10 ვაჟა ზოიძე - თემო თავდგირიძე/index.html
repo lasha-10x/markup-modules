@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <section class="nav-wrapper">
+                <img src="./assets/logo.png" alt="stripe" style="width: 68px;height: 33px; padding: 4px;">
+                <ul class="nav_list">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a class="contact-a">Contact sales<img src="./assets/SVG.png" alt="SVG"></a></li>
+                    <li><button class="nav_list-sing-in">Sign in<img src="./assets/SVG2.png" alt="SVG2"></button></li>
+                </ul>
+                <div class="burger-menue" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                  <script>
+                    function myFunction(x) {
+                      x.classList.toggle("change");
+                    }
+                    </script>
+            </section>
+        </nav>
+        <section class="Background-shape"></section>
+        <section class="heder-content">
+        <section class="header-content-wrapper">
+            <div class="content">
+                <h1>Financial infrastructure for the internet</h1>
+                <p>Millions of companies of all sizes use Stripe online and in person to accept payments, send payouts, automate financial processes, and ultimately grow revenue.</p>
+                <button class="content-button"><span>Start now</span><img src="./assets/SVG.png" alt="SVG" ></button>
+                <button class="content-second-button" ><span>Contact sales</span><img src="./assets/black_icon.png" alt="SVG" ></button>
+            </div>
+            
+        <div class="payment-form">
+            <img src="./assets/input-icon.png" alt="input-icon">
+            <h2>Abstraction Magazine</h2>
+            <p class="price">$19 per month</p>
+            <button>Pay with Apple Pay</button>
+            <div id="separator-background">
+                <div class="separator">Or pay with card</div>
+            </div>
+        
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+        
+                <label for="card-number">Card Information</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" name="expiry" placeholder="MM / YY" style="flex: 1;" required>
+                    <input type="text" name="cvc" placeholder="CVC" style="flex: 1;" required>
+                </div>
+        
+                <label for="country">Country or region</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <!-- Add more options as needed -->
+                </select>
+        
+                <label for="zip">ZIP</label>
+                <input type="text" id="zip" name="zip" placeholder="ZIP Code" required>
+        
+                <button type="submit">Pay</button>
+            </form>
+            
+        </div>
+        
+      </section>
+    </section> 
+    </header>
+    <section class="support-company-cta">
+        <section class="support-company-cta-wrapper">
+            <img class="logo-wrapper" src="./assets/amazon-logo.png" alt="amazon-logo">
+            <img class="logo-wrapper" src="./assets/selsforc-logo.png" alt="selsforc-logo">
+            <img class="logo-wrapper" src="./assets/google-logo.png" alt="google-logo">
+            <img class="logo-wrapper" src="./assets/urbn-logo.png" alt="urbn-logo">
+            <img class="logo-wrapper" src="./assets/shopify-logo.png" alt="shopify-logo">
+            <img class="logo-wrapper" src="./assets/whatsapp-logo.png" alt="whatsapp-logo">
+            <img class="logo-wrapper" src="./assets/bmw-logo.png" alt="bmw-logo">
+            <img class="logo-wrapper" src="./assets/mariott-logo.png" alt="mariott-logo">
+        </section>
+  </section>
+
+  <section class="section-main">
+    <div class="section-cta-wrapper">
+        <div class="content-pair">
+            <div class="text-content">
+                <h4 class="subheading">Modular solutions</h4>
+                <h2 class="headline">A fully integrated suite of financial and payments products</h2>
+                <p class="description">Reduce costs, grow revenue, and run your business more efficiently on a fully integrated platform. Use Stripe to handle all of your payments-related needs, manage revenue operations, and launch (or invent) new business models.</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/1.png" alt="Financial Card Mockup">
+            </div>
+        </div>
+        <div class="content-pair">
+            <div class="text-content">
+                <h4 class="subheading"><img src="./assets/payment.png" alt=""> Payment</h4>
+                <h2 class="headline">Accept and optimize payments, globally</h2>
+                <p class="description">Increase authorization rates, optimize your checkout conversion, and offer local payment methods in every market.</p>
+                <button class="text-content-btn"><span>Start with Payments </span><img src="./assets/SVG.png" alt="SVG" ></button>
+                <p class="see-also">See also</p>
+                <p class="see-also-p"><span class="first-word">Tax</span> for automating sales tax and VAT</p>
+                <p class="see-also-p"><span class="first-word">Radar</span> for fraud prevention and management</p>
+                <p class="see-also-p"><span class="first-word">Terminal</span> for custom in-person payments</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/2.png" alt="Checkout Image">
+            </div>
+        </div>
+        <div class="content-pair">
+            <div class="text-content">
+                <h4><img src="./assets/billing.png" alt=""> Billing</h4>
+                <h2 class="headline">Capture recurring revenue</h2>
+                <p class="description">Support recurring business models, minimize churn,
+                    and automate finance operations.</p>
+                    <button class="text-content-btn"><span>Start with Billing </span><img src="./assets/SVG.png" alt="SVG" ></button>
+                    <p class="see-also">See also</p>
+                    <p class="see-also-p"><span class="first-word">Invoicing</span> for invoice creation, collection, and tracking</p>
+                    <p class="see-also-p"><span class="first-word">Revenue Recognition </span> for streamlined accrual accounting</p>
+                    <p class="see-also-p"><span class="first-word">Sigma</span> for custom revenue reports</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/3.png" alt="Billing Image">
+            </div>
+        </div>
+        <div class="content-pair">
+            <div class="text-content">
+                <h4><img src="./assets/connect.png" alt=""> Connect</h4>
+                <h2 class="headline">Set up multiparty payments and payouts</h2>
+                <p class="description">Integrate payments into your platform or marketplace for end-to-end payments experiences.</p>
+                <button class="text-content-btn"><span>Start with Connect </span><img src="./assets/SVG.png" alt="SVG" ></button>
+                <p class="see-also">See also</p>
+                <p class="see-also-p"><span class="first-word">Terminal</span> for custom in-person payments</p>
+                <p class="see-also-p"><span class="first-word">Instant Payouts</span> for fast payments to users</p>
+                <p class="see-also-p"><span class="first-word">Payment Elements</span> for customizable UIs</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/4.png" alt="Financial Card Mockup">
+            </div>
+        </div>
+        <div class="content-pair">
+            <div class="text-content">
+                <h4><img src="./assets/issuing.png" alt=""> Issuing</h4>
+                <h2 class="headline">Build a fintech offering with banking-as-a-service</h2>
+                <p class="description">Launch, manage, and scale a commercial card program without any setup fees.</p>
+                <button class="text-content-btn"><span>Start with Issuing </span><img src="./assets/SVG.png" alt="SVG" ></button>
+                <p class="see-also">See also</p>
+                <p class="see-also-p"><span class="first-word">Treasury</span> for financial accounts</p>
+                <p class="see-also-p"><span class="first-word">Capital</span> for offering fast, flexible financing</p>
+                <p class="see-also-p"><span class="first-word">Connect</span> for powering platform payments</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/5.png" alt="Financial Card Mockup">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="conteinet-content">
+        <h5>Global scale</h5>
+        <p class="title-content">The backbone for global commerce</p>
+        <p>Stripe makes moving money as easy and programmable as moving data. Our teams are based in offices around the world and process hundreds of billions of dollars yearly for businesses of all sizes.</p>
+
+        <div class="stats">
+            <div class="stat">500M+ API requests per day.</div>
+            <div class="stat">99.999% historical uptime for Stripe services.</div>
+            <div class="stat">90% of U.S. adults have bought from businesses using Stripe.</div>
+            <div class="stat">135+ currencies and payment methods supported.</div>
+        </div>
+    </div>
+
+    <canvas class="globe" id="globeCanvas"></canvas>
+</div>
+
+
+
+
+<section class="enterprise-section">
+    <div class="enterprise-content">
+        <p class="enterprise-subheading">Enterprise reinvention</p>
+        <h2 class="enterprise-title">Bring agility to your enterprise</h2>
+        <p class="enterprise-description">
+            You can use Stripe not only to accept payments but also to quickly support new markets, 
+            upgrade existing systems and tools, go direct-to-consumer, and engage customers with 
+            subscriptions and marketplaces. Get expert integration guidance from our 
+            <a href="#" class="enterprise-link">professional services team</a> and 
+            <a href="#" class="enterprise-link">certified partners</a>.
+        </p>
+        <button class="text-content-btn"><span>Contact Sales</span><img src="./assets/SVG.png" alt="SVG" ></button>
+    </div>
+    
+    <div class="enterprise-stats">
+        <div class="stats-item">
+            <h3>Millions</h3>
+            <p>BMW owners using ConnectedDrive Store</p>
+        </div>
+        <div class="stats-item">
+            <h3>350+</h3>
+            <p>US dealerships</p>
+        </div>
+        <div class="stats-item">
+            <p>Products used</p>
+            <span class="tag">Payments</span>
+            <span class="tag">Connect</span>
+        </div>
+    </div>
+    
+    <div class="enterprise-card">
+        <img src="./assets/amazon-card.png" alt="BMW">
+    </div>
+</section>
+    <section class="logos">
+        <img src="./assets/bmw.png" alt="BMW">
+        <img src="./assets/amazon.png" alt="Amazon">
+        <img src="./assets/maersk.png" alt="Maersk">
+        <img src="./assets/twilio.png" alt="Twilio">
+    </section>
+    <section class="grig-cta-section">
+        <section class="build-section">
+          <p class="built">Built for growth</p>
+          <p class="grig-title">Take your startup farther, faster</p>
+          <p>Startups build on Stripe to launch faster, adapt as they grow, and automate workflows to do more with less.</p>
+        </section>
+        <div class="card-container">
+          <div class="card card1">
+            <img src="./assets/atlas.png" alt="Atlas">
+            <div class="card-content">
+              <h3>Incorporate your company</h3>
+              <p>Form a legal entity, issue stock, and start accepting payments.</p>
+            </div>
+          </div>
+          <div class="card card2">
+            <img src="./assets/payment-links.png" alt="Payment Links">
+            <div class="card-content">
+              <h3>Validate your idea</h3>
+              <p>Test your product idea by launching payments with little to no code.</p>
+            </div>
+          </div>
+          <div class="card card3">
+            <img src="./assets/checkout.png" alt="Checkout">
+            <div class="card-content">
+              <h3>Sell to consumers</h3>
+              <p>Launch a B2C business with a prebuilt payment page that’s optimized for conversion.</p>
+            </div>
+          </div>
+          <div class="card card4">
+            <img src="./assets/powdul.png" alt="Invoice">
+            <div class="card-content">
+              <h3>Sell to businesses</h3>
+              <p>Launch a B2B business and collect one-time or recurring payments from customers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="developers-conteinet">
+        <section class="developers-wrapper-conteinet">
+            <div class="content-conteiner">
+                <h4 class="highlight">Designed for developers</h4>
+                <p class="developers-title">Ship more quickly with powerful and easy-to-use APIs</p>
+                <p>Save engineering time with unified payments functionality. We obsess over the maze of gateways, payments rails, and financial institutions that make up the global economic landscape so that your teams can build what you need on one platform.</p>
+                <a href="#" class="btn">Read the docs →</a>
+            </div>
+            <div class="code-snippet">
+            <p class="codes">   
+    const stripe = require('stripe')('sk_test_BQokikJ0vBla...');
+    await stripe.paymentIntents.create({
+        amount: 2000,
+        currency: 'usd'
+    });
+</p>
+                <div class="terminal">
+                    <p>$ node server.js && stripe listen</p>
+                    <p>> Ready! Waiting for requests...</p>
+                    <p><span class="success">[200]</span> payment_intent.created</p>
+                    <p><span class="success">[200]</span> charge.succeeded</p>
+                    <p><span class="success">[200]</span> payment_intent.succeeded</p>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <span>🚀</span>
+                <h3>Use Stripe with your stack</h3>
+                <p>We offer client and server libraries in everything from React and PHP to .NET and iOS.</p>
+                <a href="#">See libraries →</a>
+            </div>
+    
+            <div class="feature">
+                <span>🛠️</span>
+                <h3>Try no-code options</h3>
+                <p>Customize and deploy payments interfaces directly from the Stripe Dashboard.</p>
+                <a href="#">Explore no-code →</a>
+            </div>
+    
+            <div class="feature">
+                <span>📦</span>
+                <h3>Explore prebuilt integrations</h3>
+                <p>Connect Stripe to over a hundred tools including Adobe, Salesforce, and Xero.</p>
+                <a href="#">Browse App Marketplace →</a>
+            </div>
+    
+            <div class="feature">
+                <span>🛠️</span>
+                <h3>Build on Stripe Apps</h3>
+                <p>Create an app just for your team or for the millions of businesses on Stripe.</p>
+                <a href="#">Learn about Apps →</a>
+            </div>
+        </section>
+      </section>
+      <section class="option-conteiner">
+        <section class="option-cta-conteiner">
+            <section class="title-content">
+                <h6>Launch with ease</h6>
+                <p class="optopn-title">Low- and no-code options for getting started</p>
+                <p>If you'd like to use Stripe for your business but don't have developers on staff, no problem. We have a few options depending on your needs.</p>
+            </section>
+            <section id="options">
+                <div class="option">
+                    <div class="option-icon">
+                        <img src="./assets/squarespace.png" alt="Squarespace">
+                    </div>
+                    <h2>Use a pre-integrated platform</h2>
+                    <p>Explore our directory to find out-of-the-box solutions that connect with Stripe, such as <a href="#">Squarespace</a> and <a href="#">Lightspeed</a>.</p>
+                </div>
+                <div class="option">
+                    <div class="option-icon">
+                        <img src="./assets/intuit.png" alt="Stripe Certified">
+                    </div>
+                    <h2>Build with Stripe-certified experts</h2>
+                    <p>Work with a Stripe consulting partner that can integrate and deploy Stripe solutions for you.</p>
+                </div>
+                <div class="option">
+                    <div class="option-icon">
+                        <img src="./assets/hubspot.png" alt="No-Code Products">
+                    </div>
+                    <h2>Try our no-code products</h2>
+                    <p>Create an invoice, accept <a href="#">in-person payment</a> with your phone, or share a <a href="#">payment link</a> directly from your Dashboard to start generating revenue in minutes—no code required.</p>
+                </div>
+            </section>
+        </section>
+        <section id="getting-started">
+            <div class="content-wrapper">
+                <h2>Ready to get started?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <p>Explore <a href="#" class="link">Stripe Payments</a>, or create an account instantly and start accepting payments. You can also contact us to design a custom package for your business.</p>
+                        <button class="text-content-btn"><span>Start now</span><img src="./assets/SVG.png" alt="SVG" ></button>
+                        <a href="#" class="link">Contact sales</a>
+                    </div>
+                    <div class="step">
+                        <div class="icon">🏷️</div>
+                        <h3>Always know what you pay</h3>
+                        <p>Integrated per-transaction pricing with no hidden fees.</p>
+                        <a href="#" class="link">Pricing details</a>
+                    </div>
+                    <div class="step">
+                        <div class="icon">📂</div>
+                        <h3>Start your integration</h3>
+                        <p>Get up and running with Stripe in as little as 10 minutes.</p>
+                        <a href="#" class="link">API reference</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Stripe</h3>
+                    <p>United States (English)</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Products & Pricing</h3>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Atlas</a></li>
+                        <li><a href="#">Billing</a></li>
+                        <li><a href="#">Capital</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Climate</a></li>
+                        <li><a href="#">Connect</a></li>
+                        <li><a href="#">Data Pipeline</a></li>
+                        <li><a href="#">Elements</a></li>
+                        <li><a href="#">Financial Connections</a></li>
+                        <li><a href="#">Identity</a></li>
+                        <li><a href="#">Invoicing</a></li>
+                        <li><a href="#">Issuing</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Payment Links</a></li>
+                        <li><a href="#">Payouts</a></li>
+                        <li><a href="#">Radar</a></li>
+                        <li><a href="#">Revenue Recognition</a></li>
+                        <li><a href="#">Sigma</a></li>
+                        <li><a href="#">Tax</a></li>
+                        <li><a href="#">Terminal</a></li>
+                        <li><a href="#">Treasury</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Startups</a></li>
+                        <li><a href="#">Enterprises</a></li>
+                        <li><a href="#">SaaS</a></li>
+                        <li><a href="#">Platforms</a></li>
+                        <li><a href="#">Ecommerce</a></li>
+                        <li><a href="#">Marketplaces</a></li>
+                        <li><a href="#">Crypto</a></li>
+                        <li><a href="#">Creator economy</a></li>
+                        <li><a href="#">Embedded finance</a></li>
+                        <li><a href="#">Global businesses</a></li>
+                        <li><a href="#">Finance automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Customer stories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Annual conference</a></li>
+                        <li><a href="#">Privacy & terms</a></li>
+                        <li><a href="#">Prohibited & restricted businesses</a></li>
+                        <li><a href="#">Licenses</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Cookie settings</a></li>
+                        <li><a href="#">Your privacy choices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Stripe Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact sales</a></li>
+                        <li><a href="#">Support center</a></li>
+                        <li><a href="#">Support plans</a></li>
+                        <li><a href="#">CA residents: +1 888 926 2289</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Stripe, Inc.</p>
+            </div>
+        </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+<script>
+    // Set up the scene
+    const canvas = document.getElementById('globeCanvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+    camera.position.z = 3.5;
+
+    // Load Earth texture
+    const textureLoader = new THREE.TextureLoader();
+    const earthTexture = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-dark.jpg');
+
+    // Custom shader for ocean and land color
+    const sphereMaterial = new THREE.ShaderMaterial({
+        uniforms: {
+    earthTexture: { value: earthTexture },
+    oceanColor: { value: new THREE.Color(0x0000ff) }, // Blue for oceans
+    landColor: { value: new THREE.Color(0xFF0000) }   // Brown for land
+},
+        vertexShader: `
+            varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `,
+        fragmentShader: `
+            varying vec2 vUv;
+            uniform sampler2D earthTexture;
+            uniform vec3 oceanColor;
+            uniform vec3 landColor;
+
+            void main() {
+                vec4 textureColor = texture2D(earthTexture, vUv);
+                float brightness = dot(textureColor.rgb, vec3(0.3, 0.59, 0.11)); // Convert to grayscale
+                vec3 blendedColor = mix(oceanColor, landColor, brightness); // Blend based on brightness
+                gl_FragColor = vec4(blendedColor, 1.0);
+            }
+        `
+    });
+
+    // Create the sphere
+    const sphereGeometry = new THREE.SphereGeometry(1.5, 64, 64);
+    const globe = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(globe);
+
+    // Position the globe
+    globe.position.set(0.75, 0, 0);
+
+    // Lighting (optional)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(ambientLight);
+
+    // Animation loop
+    function animate() {
+        globe.rotation.y += 0.005; // Rotate the globe
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script>
+    
+</body>
+</html>

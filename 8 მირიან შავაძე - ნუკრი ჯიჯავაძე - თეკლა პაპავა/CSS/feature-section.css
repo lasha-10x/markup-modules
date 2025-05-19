@@ -1,0 +1,71 @@
+.feature-section {
+    /* clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%); */
+    clip-path: polygon(0 23%, 100% 0, 100% 76%, 0% 100%);
+
+    background-color: #F6F9FC;
+    padding: 40px 20px;
+}
+
+.feature-wrapper {
+    width: 1080px;
+    display: flex;
+    margin: auto;
+    /* padding: 128px 32px; */
+}
+
+
+@media (max-width: 768px) {
+    .feature-section {
+        clip-path: polygon(0 5%, 100% 0, 100% 76%, 0% 100%);
+    }
+    .feature-wrapper {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+  }
+
+
+.feature-wrapper article:first-child {
+    margin-right: 112px;
+    padding-top: 46px;
+}
+
+.feature-wrapper article {
+    margin-right: 68px;
+    width: clamp(150px, 80%, 420px);
+}
+
+.feature-wrapper article h4 {
+    margin-bottom: 8px;
+}
+
+.feature-wrapper article p {
+    margin-bottom: 24px;
+}
+
+.feature-wrapper article .cta-buttons {
+    width: 270px;
+}
+
+.feature-wrapper article:first-child h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.feature-wrapper .cta-buttons a {
+    color: #635BFF;
+}
+
+.feature-wrapper article:first-child .cta-buttons a:first-child {
+    padding: 6px 16px;
+    background-color: #635BFF;
+    border-radius: 16px;
+    color: white;
+}
+
+.feature-wrapper article:first-child .cta-buttons a:last-child {
+    color: #635BFF;
+}
+

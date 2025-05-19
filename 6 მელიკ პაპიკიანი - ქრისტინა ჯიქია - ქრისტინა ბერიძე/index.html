@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/header/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>markup</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <nav class="header__menu" aria-label="Main Navigation">
+                    <ul class="header__nav">
+                        <li>
+                            <a href="#!">
+                                <img class="header__logo" src="./img/header/header-logo.svg" alt="logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="./img/header/header-mobile-logo.svg" alt="mobile-logo">
+                            </a>
+                            <img class="close-icon" src="./img/header/close.svg" alt="close">
+                        </li>
+                        <li>
+                            <a href="#!">Products</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                        <li><a href="#!">Solutions</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                        <li><a href="#!">Developers</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                        <li><a href="#!">Resources</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                        <li><a href="#!">Pricing</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                        <li><a href="#!">Contact sales</a>
+                            <img class="header__arrow" src="./img/header/arrow-right.svg" alt="arrow-right">
+                        </li>
+                    </ul>
+                    <ul class="header__signin">
+                        <li>
+                            <a href="#!">
+                                <span>Contact sales</span>
+                                <img src="./img/header/header-right-arrow-white.svg" alt="arrow">
+                            </a>
+                        </li>
+                        <li>
+                            <button class="header__btn" aria-label="Sign in">
+                                <span>Sign in</span>
+                                <img src="./img/header/header-right-arrow-carrot.svg" alt="arrow-carrot">
+                                <img src="./img/header/header-right-arrow-white.svg" alt="arrow">
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="header__burger">
+                        <img src="./img/header/burger-menu.svg" alt="menu">
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="financial">
+            <div class="container borders">
+                <div class="financial__inner">
+                    <div class="financial__items">
+                        <div class="financial__item">
+                            <h1 class="financial__title" aria-label="Card Title">Financial infrastructure for the
+                                internet
+                            </h1>
+                            <p class="financial__text">
+                                Millions of companies of all sizes use Stripe online and in
+                                person to accept payments, send payouts, automate
+                                financial processes, and ultimately grow revenue.
+                            </p>
+                            <div class="financial__item-sales">
+                                <a href="#!">
+                                    <span>Start now</span>
+                                    <img src="./img/section-1/right-arrow-white.svg" alt="start-now">
+                                </a>
+                                <a href="#!">
+                                    <span class="financial__item-sale">Contact sales</span>
+                                    <img src="./img/section-1/right-arrow-black.svg" alt="contact-sales">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="financial__item board">
+                            <form class="financial__card">
+
+                                <div class="financial__card-header">
+                                    <div class="financial__card-logo">
+                                        <img src="./img/section-1/rocket-card-logo.png" alt="card-logo">
+                                    </div>
+                                    <h3 class="financial__card-title">Abstraction Magazine</h3>
+                                    <div class="financial__card-subtitle"><span>$19</span> per month</div>
+                                    <button type="submit" class="financial__card-btn">
+                                        <img src="./img/section-1/rocket-card-apple-pay.svg" alt="payments">
+                                    </button>
+                                    <div class="financial__card-paymentmethod">
+                                        <span>Or pay with card</span>
+                                    </div>
+                                </div>
+
+                                <div class="financial__card-body">
+                                    <div class="financial__card-email">
+                                        <label for="mail">Email</label>
+                                        <input class="financial__card-email" type="email" id="mail" placeholder="">
+                                    </div>
+
+                                    <div class="financial__card-number">
+                                        <label for="card-num">Card Information</label>
+                                        <input type="text" id="card-num" placeholder="Number">
+                                        <img src="./img/section-1/rocket-card-visa.svg" alt="visa">
+                                    </div>
+                                    <div class="financial__card-info">
+                                        <input class="financial__card-month" type="text" placeholder="MM / YY">
+                                        <div class="financial__card-cvc">
+                                            <input class="financial__card-code" type="password" placeholder="CVC"
+                                                maxlength="3">
+                                            <img src="./img/section-1/rocket-card-cvc.svg" alt="cvc">
+                                        </div>
+                                    </div>
+                                    <div class="card__locations">
+                                        <label for="location">Country or region</label>
+                                        <select id="location">
+                                            <option value="new-york-us" selected>New York, United States</option>
+                                            <option value="london-gb">London, United Kingdom</option>
+                                            <option value="toronto-ca">Toronto, Canada</option>
+                                            <option value="sydney-au">Sydney, Australia</option>
+                                            <option value="berlin-de">Berlin, Germany</option>
+                                            <option value="paris-fr">Paris, France</option>
+                                            <option value="rome-it">Rome, Italy</option>
+                                            <option value="madrid-es">Madrid, Spain</option>
+                                            <option value="tokyo-jp">Tokyo, Japan</option>
+                                            <option value="beijing-cn">Beijing, China</option>
+                                        </select>
+                                    </div>
+                                    <input class="financial__card-zip" type="text" placeholder="ZIP">
+                                </div>
+
+                                <div class="financial__card-footer">
+                                    <button type="submit">Pay</button>
+                                </div>
+                            </form>
+
+
+                            <div class="dashboard">
+
+                                <div class="dashboard__items">
+                                    <div class="dashboard__item">
+                                        <div class="dashboard__item-left">
+                                            <img class="dashboard__rocket-logo" src="./img/section-1/rocket-logo.svg"
+                                                alt="rocket-logo">
+                                            <h3 class="dashboard__item-title">Rocket Rides</h3>
+                                            <img class="dashboard__rocket-arrow"
+                                                src="./img/section-1/rocket-arrow-down.svg" alt="arrow-down">
+                                        </div>
+                                    </div>
+                                    <div class="dashboard__item">
+                                        <div class="dashboard__item-search">
+                                            <label for="search">
+                                                <img src="./img/section-1/rocket-search.svg" alt="serch-icon">
+                                            </label>
+                                            <input type="text" id="search" placeholder="Search" aria-label="Search">
+                                        </div>
+                                        <div class="dashboard__item-body">
+
+
+                                            <div class="dashboard__summary">
+                                                <h3 class="dashboard__body-title">Today</h3>
+                                                <div class="dashboard__summary-items">
+                                                    <div class="dashboard__summary-item">
+                                                        <div class="dashboard__summary-title">
+                                                            <span>Net volume</span>
+                                                            <img src="./img/section-1/rocket-small-arrow-down.svg"
+                                                                alt="arrow-down">
+                                                        </div>
+                                                        <h5 class="dashboard__summary-price">$3,528,198.72</h5>
+                                                        <div class="dashboard__summary-time">2:00 PM</div>
+                                                    </div>
+                                                    <div class="dashboard__summary-item">
+                                                        <div class="dashboard__summary-title">
+                                                            <span>Yesterday</span>
+                                                            <img src="./img/section-1/rocket-small-arrow-down.svg"
+                                                                alt="arrow-down">
+                                                        </div>
+                                                        <h5 class="dashboard__daily-price">$2,931,556.34</h5>
+                                                    </div>
+                                                </div>
+
+                                                <div class="dashboard__summary-visual">
+
+                                                    <div class="cover2">
+                                                        <canvas id="myChart2" height="70" width="470"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="dashboard__summary-subtitles">
+                                                    <span>12:00 AM</span>
+                                                    <span>Now, 2:00 PM</span>
+                                                    <span>11:59 PM</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="dashboard__analytics">
+                                                <div class="analytics__items">
+                                                    <div class="analytics__item">
+                                                        <div class="analytics__item-header">
+                                                            <div class="analytics__item-title">
+                                                                <span>Net volume from sales</span>
+                                                                <span>+32.8%</span>
+                                                            </div>
+                                                            <h5 class="analytics__item-subtitle">
+                                                                <span>$39,274.29</span>
+                                                                <span>$29,573.54</span>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="analytics__item-body">
+
+                                                            <div class="cover">
+                                                                <canvas id="myChart" width="205" height="105"></canvas>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="analytics__item-footer">
+                                                            <div class="analytics__item-date">
+                                                                <span>Apr 20</span>
+                                                                <span>Today</span>
+                                                            </div>
+                                                            <div class="analytics__item-update">
+                                                                Updated today 7:50 AM
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="analytics__item">
+                                                        <div class="analytics__item-header">
+                                                            <div class="analytics__item-title">
+                                                                <span>New customers</span>
+                                                                <span>+32.1%</span>
+                                                            </div>
+                                                            <h5 class="analytics__item-subtitle">
+                                                                <span>37</span>
+                                                                <span>28</span>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="analytics__item-body">
+
+                                                            <div class="cover">
+                                                                <canvas id="myChart1" width="205" height="105"></canvas>
+                                                            </div>
+                                                        </div>
+                                                        <div class="analytics__item-footer">
+                                                            <div class="analytics__item-date">
+                                                                <span>Apr 20</span>
+                                                                <span>Today</span>
+                                                            </div>
+                                                            <div class="analytics__item-update">
+                                                                Updated today 7:50 AM
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="analytics__item">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="financial__logos">
+                        <ul>
+                            <li>
+                                <a href="#!"><img class="amazon" src="./img/section-1/icons/amazon.svg"
+                                        alt="amazon"></a>
+                                <a href="#!"><img class="shopyfy" src="./img/section-1/icons/shopyfy.svg"
+                                        alt="shopyfy"></a>
+                            </li>
+                            <li>
+                                <a href="#!"><img class="salesforce" src="./img/section-1/icons/salesforce.svg"
+                                        alt="salesforce"></a>
+                                <a href="#!"><img class="whats-app" src="./img/section-1/icons/whatsapp_.svg"
+                                        alt="whats-app"></a>
+                            </li>
+                            <li>
+                                <a href="#!"> <img class="google" src="./img/section-1/icons/google.svg"
+                                        alt="google"></a>
+                                <a href="#!"><img class="bmv" src="./img/section-1/icons/bmv.svg" alt="bmv"></a>
+                            </li>
+                            <li>
+                                <a href="#!"><img class="urbn" src="./img/section-1/icons/urbn.svg" alt="urbn"></a>
+                                <a href="#!"><img class="marriot" src="./img/section-1/icons/marriot.svg"
+                                        alt="marriot"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container lines">
+
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="products__items">
+                    <div class="products__item integration">
+                        <h3 class="products__item-tagline">Modular solutions</h3>
+                        <h2 class="products__item-title">A fully integrated
+                            suite of financial
+                            and payments
+                            products</h2>
+                        <p class="products__item-subtitle">
+                            Reduce costs, grow revenue, and run your business
+                            more efficiently on a fully integrated platform. Use
+                            Stripe to handle all of your payments-related needs,
+                            manage revenue operations, and launch (or invent) new<br>
+                            business models.
+                        </p>
+                    </div>
+                    <div class="products__item">
+                        <div class="products__item-cards">
+                            <div class="products__item-commercial">
+                                <div class="commercial">
+                                    <div class="commercial__header">kavholm</div>
+                                    <div class="commercial__footer">
+                                        <h3 class="commercial__footer-title">
+                                            Jane Diaz
+                                        </h3>
+                                        <div class="commercial__footer-item">
+                                            <span>commercial</span>
+                                            <img src="./img/section-2/visa-comercial-logo.svg" alt="visa">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products__item-rocket">
+                                <div class="rocket">
+                                    <div class="rocket__header">
+                                        <img src="./img/section-2/rocked-rides-logo.svg" alt="">
+                                    </div>
+                                    <div class="rocket__footer">
+                                        <h4 class="rocket__footer-title">Lanchlan Brown</h4>
+                                        <img src="./img/section-2/rocked-visa-logo.svg" alt="rocked-visa">
+                                    </div>
+                                    <div class="rocket__decore">
+                                        <img src="./img/section-2/rocked-rides-decore.svg" alt="rides-decore">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products__item-powdur">
+                                <div class="powdur">
+                                    <h2 class="powdur__header">powdur</h2>
+                                    <div class="powdur__footer">
+                                        <h4 class="powdur__footer-title">Frank McNamara</h4>
+                                        <img src="./img/section-2/visa-powdur-logo.svg" alt="powdur-logo">
+                                    </div>
+                                    <div class="powdur__decores">
+                                        <img src="./img/section-2/powdur-decore-1.svg" alt="decore-1">
+                                        <img src="./img/section-2/powdur-decore-2.svg" alt="decore-2">
+                                        <img src="./img/section-2/powdur-decore-3.svg" alt="decore-3">
+                                        <img src="./img/section-2/powdur-decore-4.svg" alt="decore-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cards__funcs">
+                                <div class="icon__cover icon-one">
+                                    <img src="./img/section-2/cards-icon-1.svg" alt="icon-1">
+                                </div>
+                                <div class="icon__cover icon-two">
+                                    <img src="./img/section-2/cards-icon-2.svg" alt="icon-2">
+                                </div>
+                                <div class="icon__cover icon-three">
+                                    <img src="./img/section-2/cards-icon-3.svg" alt="icon-3">
+                                </div>
+                                <div class="icon__cover icon-four">
+                                    <img src="./img/section-2/cards-icon-4.svg" alt="icon-3">
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="product__mobile-items">
+                            <div class="icon__mibile-1 item">
+                                <img src="./img/section-2/products-icons/icon-1.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-2 item">
+                                <img src="./img/section-2/products-icons/icon-2.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-3 item">
+                                <img src="./img/section-2/products-icons/icon-3.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-4 item">
+                                <img src="./img/section-2/products-icons/icon-4.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-5 item">
+                                <img src="./img/section-2/products-icons/icon-5.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-6 item shadow">
+                                <img src="./img/section-2/products-icons/icon-6.svg" alt="mibile-icon">
+                                <span>Payments</span>
+                            </div>
+                            <div class="icon__mibile-7 item">
+                                <img src="./img/section-2/products-icons/icon-7.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-8 item">
+                                <img src="./img/section-2/products-icons/icon-8.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-9 item shadow">
+                                <img src="./img/section-2/products-icons/icon-9.svg" alt="mibile-icon">
+                                <span>Connect</span>
+                            </div>
+                            <div class="icon__mibile-10 item">
+                                <img src="./img/section-2/products-icons/icon-10.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-11 item shadow">
+                                <img src="./img/section-2/products-icons/icon-11.svg" alt="mibile-icon">
+                                <span>Terminal</span>
+                            </div>
+                            <div class="icon__mibile-12 item">
+                                <img src="./img/section-2/products-icons/icon-12.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-13 item">
+                                <img src="./img/section-2/products-icons/icon-13.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-14 item">
+                                <img src="./img/section-2/products-icons/icon-14.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-15 item">
+                                <img src="./img/section-2/products-icons/icon-15.svg" alt="mibile-icon">
+                            </div>
+                            <div class="icon__mibile-16 item">
+                                <img src="./img/section-2/products-icons/icon-16.svg" alt="mibile-icon">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="payments">
+            <div class="container lines">
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="payments__items">
+                    <div class="payments__globally">
+                        <div class="payments__globally-tagline">
+                            <img src="./img/section-3/payments-logo.svg" alt="payments-logo">
+                            <span>Payments</span>
+                        </div>
+                        <h2 class="payments__title">Accept and optimize
+                            payments, globally</h2>
+                        <p class="payments__subtitle">Increase authorization rates, optimize your checkout
+                            conversion, and offer local payment methods in every
+                            market.</p>
+                        <button class="payments__btn">
+                            <span>Start with Payments</span>
+                            <img src="./img/section-3/arrow-right.svg" alt="arrow-r">
+                        </button>
+                        <dl>
+                            <dt>See also</dt>
+                            <dd><span>Tax</span> for automating sales tax and VAT</dd>
+                            <dd class="radar"><span>Radar</span> for fraud prevention and management</dd>
+                            <dd><span>Terminal</span> for custom in-person payments</dd>
+                        </dl>
+                    </div>
+                    <div class="payments__card">
+                        <form class="financial__card">
+
+                            <div class="financial__card-header">
+                                <div class="financial__card-logo payments-logo">
+                                    <img src="./img/section-3/chair.png" alt="card-logo">
+                                </div>
+                                <h3 class="financial__card-title payments-descr">Wood Chair 001</h3>
+                                <div class="financial__card-subtitle payments-price"><span>$149</span></div>
+                                <button type="submit" class="financial__card-btn">
+                                    <img src="./img/section-1/rocket-card-apple-pay.svg" alt="payments">
+                                </button>
+
+
+                                <button type="submit" class="financial__card-btn card-pay">
+                                    <img class="pay__link" src="./img/section-3/link.svg" alt="link">
+                                    <span>Pay Faster</span>
+                                    <img src="./img/section-3/lock.svg" alt="lock">
+                                </button>
+
+
+
+
+                                <div class="financial__card-paymentmethod payments__method">
+                                    <span>Or pay another way</span>
+                                </div>
+                            </div>
+
+                            <div class="financial__card-body">
+                                <div class="financial__card-email">
+                                    <label for="mail-1">Email</label>
+                                    <input class="financial__card-email" type="email" id="mail-1"
+                                        placeholder="jane.diaz@example.com">
+                                </div>
+
+                                <div class="financial__card-number">
+                                    <label for="card-num-1">Card Information</label>
+                                    <input type="text" id="card-num-1" placeholder="4242 4242 4242 4242">
+                                    <img src="./img/section-1/rocket-card-visa.svg" alt="visa">
+                                </div>
+                                <div class="financial__card-info">
+                                    <input class="financial__card-month" type="text" placeholder="MM / YY">
+                                    <div class="financial__card-cvc">
+                                        <input class="financial__card-code" type="password" placeholder="CVC"
+                                            maxlength="3">
+                                        <img src="./img/section-1/rocket-card-cvc.svg" alt="cvc">
+                                    </div>
+                                </div>
+                                <div class="card__locations">
+                                    <label for="location-1">Country or region</label>
+                                    <select id="location-1">
+                                        <option value="new-york-us" selected>New York, United States</option>
+                                        <option value="london-gb">London, United Kingdom</option>
+                                        <option value="toronto-ca">Toronto, Canada</option>
+                                        <option value="sydney-au">Sydney, Australia</option>
+                                        <option value="berlin-de">Berlin, Germany</option>
+                                        <option value="paris-fr">Paris, France</option>
+                                        <option value="rome-it">Rome, Italy</option>
+                                        <option value="madrid-es">Madrid, Spain</option>
+                                        <option value="tokyo-jp">Tokyo, Japan</option>
+                                        <option value="beijing-cn">Beijing, China</option>
+                                    </select>
+                                </div>
+                                <input class="financial__card-zip" type="text" placeholder="ZIP">
+                            </div>
+
+                            <div class="financial__card-footer">
+                                <button type="submit">Pay $149</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="billing">
+            <div class="container lines">
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="billing__items">
+                    <div class="billing__revenue">
+                        <div class="payments__globally">
+                            <div class="payments__globally-tagline">
+                                <img src="./img/section-4/billing-logo.svg" alt="billing-logo">
+                                <span>Billing</span>
+                            </div>
+                            <h2 class="payments__title billing-title">Capture recurring revenue</h2>
+                            <p class="billing-subtitle">Support recurring business models, minimize churn,
+                                and automate finance operations.</p>
+                            <button class="payments__btn">
+                                <span>Start with Billing</span>
+                                <img src="./img/section-3/arrow-right.svg" alt="arrow-r">
+                            </button>
+                            <dl>
+                                <dt>See also</dt>
+                                <dd><span>Invoicing</span> for invoice creation, collection, and tracking</dd>
+                                <dd class="radar"><span>Revenue Recognition</span> for streamlined accrual accounting
+                                </dd>
+                                <dd><span>Sigma</span> for custom revenue reports</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="quantum">
+                        <div class="quantum__header">
+                            <div class="quantum__logo">
+                                <img src="./img/section-4/quantum-logo.svg" alt="quantum-logo">
+                                <span>Quantum</span>
+                            </div>
+                            <nav class="quantum__header-list">
+                                <ul>
+                                    <li><a href="#!">Products</a></li>
+                                    <li><a href="#!">Pricing</a></li>
+                                    <li><a href="#!">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="quantum__items">
+                            <div class="quantum__item">
+                                <h4 class="quantum__item-title">Standard</h4>
+                                <h5 class="quantum__item-subtitle">Up to 5 users</h5>
+                                <div class="quantum__item-price"><span>$49</span> /month</div>
+                                <div class="btn__cover">
+                                    <button>Subscribe</button>
+                                </div>
+
+                                <dl>
+                                    <dt>This includes:</dt>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>12 months historical data</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>4 hr data refresh</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>500+ third party integrations</span>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <div class="quantum__item active">
+                                <h4 class="quantum__item-title">Professional
+
+                                    <span>Popular!</span>
+
+                                </h4>
+                                <h5 class="quantum__item-subtitle">Up to 25 users</h5>
+                                <div class="quantum__item-price"><span>$149</span> /month</div>
+                                <div class="btn__cover">
+                                    <button>Subscribe</button>
+                                </div>
+
+                                <dl>
+                                    <dt>This includes:</dt>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>24 months historical data</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>1 hr data refresh</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>1,000+ third party integrations</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>Simple reporting</span>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <div class="quantum__item">
+                                <h4 class="quantum__item-title">Enterprise</h4>
+                                <h5 class="quantum__item-subtitle">Unlimited users</h5>
+                                <div class="quantum__item-price"><span>$299</span> /month</div>
+                                <div class="btn__cover">
+                                    <button>Subscribe</button>
+                                </div>
+
+                                <dl>
+                                    <dt>This includes:</dt>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>Unlimited historical data</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>15 min data refresh</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>2,000+ third party integrations</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>Advanced reporting</span>
+                                    </dd>
+                                    <dd>
+                                        <img src="./img/section-4/checked.svg" alt="checked">
+                                        <span>Priority support</span>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connect">
+            <div class="container lines">
+                <div class="products__line-decore">
+
+                </div>
+                <div class="connect__items">
+                    <div class="connect__multiparty">
+                        <div class="payments__globally connect-globally">
+                            <div class="payments__globally-tagline">
+                                <img src="./img/section-5/connect-logo.svg" alt="connect-logo">
+                                <span>Connect</span>
+                            </div>
+                            <h2 class="payments__title connect-title">Set up multiparty
+                                payments and payouts</h2>
+                            <p class="payments__subtitle connect-subtitle">Integrate payments into your platform or
+                                marketplace
+                                for end-to-end payments experiences.</p>
+                            <button class="payments__btn">
+                                <span>Start with Connect</span>
+                                <img src="./img/section-3/arrow-right.svg" alt="arrow-r">
+                            </button>
+                            <dl>
+                                <dt>See also</dt>
+                                <dd><span>Terminal</span> for custom in-person payments</dd>
+                                <dd><span>Instant Payouts</span> for fast payments to users</dd>
+                                <dd><span>Payment Elements</span> for customizable UIs</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="connect__providers">
+                        <div class="connect__header">
+                            <div class="connect__header-inner">
+                                <div class="connect__item">
+                                    <span>#9124</span>
+                                    <span class="connect__name">Jacques Muller</span>
+                                </div>
+                                <button class="connect__header-btn">Processing</button>
+                            </div>
+                            <span class="connect__price">$200.00</span>
+                        </div>
+
+                        <div class="connect__header header-bg">
+                            <div class="connect__header-inner">
+                                <div class="connect__item">
+                                    <span>#9125</span>
+                                    <span class="connect__name">Hanako Yamada</span>
+                                </div>
+                                <span class="connect__header-btn">Processing</span>
+                            </div>
+                            <span class="connect__price">$150.00</span>
+                        </div>
+
+                        <div class="connect__body">
+                            <button class="connect__buyers">Buyers</button>
+                            <button class="connect__platform">Platform</button>
+                            <button class="connect__sellers">Sellers or service providers</button>
+                            <span>$4.50</span>
+                            <span>$145.50</span>
+                            <img src="./img/section-5/arrow-down-1.svg" alt="guide-1">
+                            <img src="./img/section-5/arrow-down-2.svg" alt="guide-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="issuing">
+            <div class="container lines">
+
+                <div class="products__line-decore"></div>
+                <div class="issuing__items">
+                    <div class="issuing__offering">
+                        <div class="payments__globally">
+                            <div class="payments__globally-tagline">
+                                <img src="./img/section-6/issuing-logo.svg" alt="issuing-logo">
+                                <span>Issuing</span>
+                            </div>
+                            <h2 class="payments__title">Build a fintech offering with
+                                banking-as-a-service</h2>
+                            <p class="payments__subtitle">Launch, manage, and scale a commercial card program
+                                without any setup fees.</p>
+                            <button class="payments__btn">
+                                <span>Start with Issuing</span>
+                                <img src="./img/section-3/arrow-right.svg" alt="arrow-r">
+                            </button>
+                            <dl>
+                                <dt>See also</dt>
+                                <dd><span>Treasury</span> for financial accounts</dd>
+                                <dd class=""><span>Capital</span> for offering fast, flexible financing</dd>
+                                <dd><span>Connect</span> for powering platform payments</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="issuing__service">
+                        <div class="products__item-cards">
+                            <div class="products__item-commercial">
+                                <div class="commercial">
+                                    <div class="commercial__header">kavholm</div>
+                                    <div class="commercial__footer">
+                                        <h4 class="commercial__footer-title">
+                                            Jane Diaz
+                                        </h4>
+                                        <div class="commercial__footer-item">
+                                            <span>commercial</span>
+                                            <img src="./img/section-2/visa-comercial-logo.svg" alt="visa">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products__item-rocket">
+                                <div class="rocket">
+                                    <div class="rocket__header">
+                                        <img src="./img/section-2/rocked-rides-logo.svg" alt="">
+                                    </div>
+                                    <div class="rocket__footer">
+                                        <h4 class="rocket__footer-title">Lanchlan Brown</h4>
+                                        <img src="./img/section-2/rocked-visa-logo.svg" alt="rocked-visa">
+                                    </div>
+                                    <div class="rocket__decore">
+                                        <img src="./img/section-2/rocked-rides-decore.svg" alt="rides-decore">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products__item-powdur">
+                                <div class="powdur">
+                                    <h4 class="powdur__header">powdur</h4>
+                                    <div class="powdur__footer">
+                                        <h4 class="powdur__footer-title">Frank McNamara</h4>
+                                        <img src="./img/section-2/visa-powdur-logo.svg" alt="powdur-logo">
+                                    </div>
+                                    <div class="powdur__decores">
+                                        <img src="./img/section-2/powdur-decore-1.svg" alt="decore-1">
+                                        <img src="./img/section-2/powdur-decore-2.svg" alt="decore-2">
+                                        <img src="./img/section-2/powdur-decore-3.svg" alt="decore-3">
+                                        <img src="./img/section-2/powdur-decore-4.svg" alt="decore-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="commerce">
+            <div class="commerce__img">
+                <img src="./img/section-7/globus2.png" alt="globus">
+            </div>
+            <div class="container lines">
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="commerce__items">
+                    <div class="commerce__backbone">
+                        <h5 class="commerce__backbone-tagline">Global scale</h5>
+                        <h2 class="commerce__backbone-title">The backbone for
+                            global commerce</h2>
+                        <p class="commerce__backbone-subtitle">Stripe makes moving money as easy and
+                            programmable as moving data. Our teams are
+                            based in offices around the world and we process
+                            hundreds of billions of dollars each year for
+                            ambitious businesses of all sizes.</p>
+
+                        <nav>
+                            <ul class="commerce__list">
+                                <li>
+                                    <h4 class="commerce__item-title">250M+</h4>
+                                    <h5 class="commerce__item-subtitle">API requests per day, peaking at
+                                        13,000 requests a second.</h5>
+                                </li>
+                                <li>
+                                    <h4 class="commerce__item-title">99.999%</h4>
+                                    <h5 class="commerce__item-subtitle">historical uptime for <span>Stripe
+                                            services.</span></h5>
+                                </li>
+                                <li>
+                                    <h4 class="commerce__item-title">90%</h4>
+                                    <h5 class="commerce__item-subtitle">of U.S. adults have bought from
+                                        businesses using Stripe.</h5>
+                                </li>
+                                <li>
+                                    <h4 class="commerce__item-title">135+</h4>
+                                    <h5 class="commerce__item-subtitle">currencies and payment
+                                        methods supported.</h5>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="enterprise">
+            <div class="container lines">
+
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="enterprise__inner">
+                    <div class="enterprise__head">
+                        <h5 class="enterprise__tagline">Enterprise reinvention</h5>
+                        <h2 class="enterprise__header">Bring agility to your enterprise</h2>
+                        <p class="enterprise__header-subtitle">You can use Stripe not only to accept payments but also
+                            to
+                            quickly support new markets,
+                            upgrade existing systems and tools, go direct-to-consumer, and engage customers with
+                            subscriptions and marketplaces. Get expert integration guidance from our <span>professional
+                                services team </span>and <span>certified partners</span> so you can see value with
+                            Stripe
+                            faster.</p>
+                        <a class="enterprise__sales" href="#!">
+                            <span>Contact sales</span>
+                            <img src="./img/section-8/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+                    <div class="enterprise__card-items">
+                        <div class="enterprise__card-item">
+                            <div class="enterprise__card-block">
+                                <span class="decore">5+</span>
+                                <p>Amazon businesses on
+                                    Stripe including Prime,
+                                    Audible, and Amazon Pay.</p>
+                            </div>
+                            <div class="enterprise__card-block">
+                                <span class="decore">50+</span>
+                                <p>Payment methods available
+                                    on Stripe</p>
+                            </div>
+                            <div class="enterprise__card-product">
+                                <h3 class="product__title decore">Products used</h3>
+                                <div class="card-product-entry">
+                                    <img src="./img/section-8/payments.svg" alt="payments">
+                                    <span>Payments</span>
+                                </div>
+                                <div class="card-product-entry">
+                                    <img src="./img/section-8/connect.svg" alt="connect">
+                                    <span>Connect</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="enterprise__card-item">
+                            <div class="enterprise__card-inner">
+                                <img class="enterprise__card-bg" src="./img/section-8/card-bg-1.png" alt="amazon">
+                                <h4 class="enterprise__card-descr">See how Amazon simplified cross-
+                                    border payments with Stripe</h4>
+                                <img src="./img/section-8/amazon-card-logo.svg" alt="card-logo">
+                                <img src="./img/section-8/card-icon.svg" alt="card-icon">
+
+                            </div>
+                            <div class="enterprise__slider">
+                                <div class="enterprise__slider-inner">
+                                    <span class=""></span>
+                                    <span class="active"></span>
+                                    <span class=""></span>
+                                    <span class=""></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="enterprise__logos">
+                        <div class="enterprise__logos-item">
+                            <img src="./img/section-8/bmw-icon.svg" alt="bmw">
+                        </div>
+                        <div class="enterprise__logos-item">
+                            <img src="./img/section-8/amazon-icon.svg" alt="amazon">
+                        </div>
+                        <div class="enterprise__logos-item">
+                            <img src="./img/section-8/maersk.svg" alt="maersk">
+                        </div>
+                        <div class="enterprise__logos-item">
+                            <img src="./img/section-8/twilio.svg" alt="twilio">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="startup">
+            <div class="container lines">
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="startup__header">
+                    <h5 class="startup__tagline">Built for growth</h5>
+                    <h2 class="startup__title">Take your startup farther, faster</h2>
+                    <p class="startup__subtitle">Startups build on Stripe to launch faster, adapt as they grow, and
+                        automate
+                        workflows to do more with less. Build your own API-based integration or use our
+                        low- to no-code solutions, which are simple enough for easy implementation and
+                        powerful enough to scale as fast and as far as you need.</p>
+                </div>
+
+                <div class="startup__items">
+                    <div class="startup__item">
+                        <div class="startup__atlas">
+
+                            <div class="startup__atlas-header">
+                                <dl>
+                                    <dt>Atlas</dt>
+                                    <dd class="active">Overview</dd>
+                                    <dd>Company</dd>
+                                    <dd>Templates</dd>
+                                    <dd>Partners</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>RocketRides, Inc.</dt>
+                                    <dd>Incorporate your company</dd>
+                                    <dd>Stock issued for founders</dd>
+                                    <dd>Purchase your shares</dd>
+                                    <dd><strong>File 83(b) election</strong></dd>
+                                    <dd><strong>Open a bank account</strong></dd>
+                                </dl>
+                            </div>
+
+                            <div class="startup__atlas-body">
+                                <div class="startup__body-header">
+                                    <img src="./img/section-9/atlas-icon.svg" alt="atlas">
+                                    <span>Atlas</span>
+                                </div>
+                                <h3 class="startup__body-title">Incorporate your company</h3>
+                                <h4 class="startup__body-subtitle">Form a legal entity, issue stock, and start
+                                    accepting payments.</h4>
+                            </div>
+                        </div>
+                        <div class="startup__mail">
+                            <div class="startup__card-identify">
+                                <label for="mail-2">Email</label>
+                                <input type="email" id="mail-2" placeholder="jane.dias@example.com">
+                                <div class="startup__card-number">
+                                    <label for="code">Card information</label>
+                                    <input class="cardnum" type="email" id="code" placeholder="1234 1234 1234 1234">
+                                    <img src="./img/section-9/union-pay.svg" alt="union-pay">
+                                    <img src="./img/section-9/amex-icon.svg" alt="amex-icon">
+                                    <img src="./img/section-9/mastercard-icon.svg" alt="mastercard-icon">
+                                    <img src="./img/section-9/visa-icon.svg" alt="visa">
+                                </div>
+                                <div class="startup__card-secure">
+                                    <input type="text" placeholder="MM/YY">
+                                    <div class="startup__card-privete">
+                                        <input type="password" placeholder="CVC" maxlength="3">
+                                        <img src="./img/section-9/cvc-icon.svg" alt="cvc-icon">
+                                    </div>
+                                </div>
+                                <label for="card-name">Name on card</label>
+                                <input type="email" id="card-name" placeholder="Card name">
+                            </div>
+
+                            <div class="startup__consumers">
+                                <div class="startup__checkout">
+                                    <img src="./img/section-9/checkout-icon.svg" alt="checkout">
+                                    <span>Checkout</span>
+                                </div>
+                                <h3 class="startup__consumers-title">Sell to consumers</h3>
+                                <h4 class="startup__consumers-subtitle">Launch a B2C business with a prebuilt payment
+                                    page that’s optimized for conversion.</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="startup__item">
+                        <div class="startup__validate">
+                            <div class="startup__validate-header">
+                                <div class="startup__header-entry">
+                                    <span class="question">👋 anything I can help with today?</span>
+                                    <span class="answer">Hey, can I buy a license just for myself?</span>
+                                    <span class="question">Sure, in that case I'd recommend our<br>starter plan.</span>
+                                    <a class="link" href="#!">buy.stripe.com/Ae93Jis</a>
+                                    <img class="close" src="./img/section-9/close-icon.svg" alt="close">
+                                    <img class="message" src="./img/section-9/message-icon.svg" alt="message">
+                                </div>
+                                <div class="startup__validate-qr">
+                                    <div class="startup__validate-inner">
+                                        <span class="qr__price">$19.99</span>
+                                        <span class="qr__title">per item</span>
+                                        <div class="validate__qr">
+                                            <img src="./img/section-9/qr-code.png" alt="qr-code">
+                                            <span>Scan to pay</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="startup__payment-body">
+                                <button class="startup__payment-tagline">
+                                    <img src="./img/section-9/payment-link-icon.svg" alt="payment">
+                                    <span>Payment Links</span>
+                                </button>
+                                <h3 class="startup__payment-title">Validate your idea</h3>
+                                <h4 class="startup__payment-subtitle">Test your product idea by launching payments
+                                    with little to no code.</h4>
+                            </div>
+
+                        </div>
+                        <div class="startup__sell">
+                            <div class="startup__sell-header">
+                                <div class="startup__sell-cover">
+                                    <div class="startup__sell-logo">
+                                        <img src="./img/section-9/powdur-logo-icon.svg" alt="powdur-logo">
+                                        <span>Powdur</span>
+                                    </div>
+                                    <div class="startup__sell-items">
+                                        <div class="startup__sell-views">
+                                            <div class="startup__sell-price">$144.78</div>
+                                            <div class="startup__sell-date">Due Feb 19</div>
+                                            <div class="startup__sell-notes">
+                                                <div class="startup__sell-note">
+                                                    <span>To</span>
+                                                    <span>From</span>
+                                                    <span>Memo</span>
+                                                </div>
+                                                <div class="startup__sell-note">
+                                                    <span>Jenny Rosen</span>
+                                                    <span>Powdur</span>
+                                                    <span>Note this includes nine editors and<br>unlimited
+                                                        projects.</span>
+                                                </div>
+                                            </div>
+                                            <div class="startup__sell-details">
+                                                <span>View invoice details</span>
+                                                <img src="./img/section-9/arrow-right-icon.svg" alt="arrow-right">
+                                            </div>
+
+                                            <img class="sell__views-icon" src="./img/section-9/powdur-icon.svg"
+                                                alt="icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="startup__sell-body">
+                                <div class="startup__sell-businesses">
+                                    <img src="./img/section-9/invoicing-icon.svg" alt="invoice">
+                                    <span>Invoicing</span>
+                                </div>
+                                <h3 class="startup__sell-title">Sell to businesses</h3>
+                                <h4 class="startup__sell-subtitle">Launch a B2B business and collect one-time or
+                                    recurring payments from customers.</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="powerful">
+            <div class="container lines">
+                <div class="products__line-decore">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="powerful__header">
+                    <div class="powerful__developers">
+                        <h5 class="powerful__developers-tagline">Designed for developers</h5>
+                        <h2 class="powerful__developers-title">Ship more quickly with
+                            powerful and easy-to-use
+                            APIs</h2>
+                        <p class="powerful__developers-subtitle">Save engineering time with unified payments
+                            functionality. We obsess over the maze of gateways,
+                            payments rails, and financial institutions that make up
+                            the global economic landscape so that your teams can
+                            build what you need on one platform.</p>
+
+                        <a class="powerful__developers-btn" href="#!">
+                            <span>Read the docs</span>
+                            <img src="./img/section-10/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+
+                    <div class="powerful__code">
+                        <div class="powerful__code-header">
+                            <div class="code__header-code">
+                                <pre><code>
+<span class="color-1">const</span> stripe = <span class="color-2">require</span>(<span class="color-3">'stripe'</span>)(<span class="color-3">'sk_test_BQokikJOvBi2Hl4olfQ2'</span>
+                                   
+<span class="color-1">await</span> stripe.paymentIntents.<span class="color-2">create</span>({
+amount: <span class="color-4">2000</span>,
+currency: <span class="color-3">'usd'</span>
+});<img src="./img/section-10/end-icon.svg" alt="cursor">
+                                    </code></pre>
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                </ul>
+                            </div>
+                            <div class="code__header-funcs">
+                                <div class="code__header-serv">
+                                    <span>NORMAL</span>
+                                    <span>server.js</span>
+                                </div>
+                                <div class="code__header-action">
+                                    <span>600%</span>
+                                    <img src="./img/section-10/burdeg-icon.svg" alt="menu">
+                                    <span class="linenum">6/1</span>
+                                    <span>ln</span>
+                                    <span>:</span>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="powerful__code-footer">
+                            <pre>
+                                <code>
+<span class="color-1">$</span> node server.js && stripe listen
+> Ready! Waiting for requests...
+<span class="color-5">2024-05-02 19:07:43</span> [<span class="color-2">200</span>] payment_intent.created
+<span class="color-5">2024-05-02 19:07:43</span> [<span class="color-2">200</span>] charge.succeeded
+<span class="color-5">2024-05-02 19:07:43</span> [<span class="color-2">200</span>] payment_intent.succeeded
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="powerful__list">
+                    <ul>
+                        <li class="powerful__list-item">
+                            <img src="./img/section-10/stripe-icon.svg" alt="stripe">
+                            <h3 class="list__item-title">Use Stripe with your stack</h3>
+                            <h4 class="list__item-subtitle">We offer client and server
+                                libraries in everything from
+                                React and PHP to .NET and iOS.</h4>
+                            <a href="#!">
+                                <span>See libraries</span>
+                                <img src="./img/section-10/arrow-right-2.svg" alt="rrow-right">
+                            </a>
+                        </li>
+                        <li class="powerful__list-item">
+                            <img src="./img/section-10/code-icon.svg" alt="stripe">
+                            <h3 class="list__item-title">Try no-code options</h3>
+                            <h4 class="list__item-subtitle">Customize and deploy
+                                payments interfaces directly
+                                from the Stripe Dashboard.</h4>
+                            <a href="#!">
+                                <span>Explore no-code</span>
+                                <img src="./img/section-10/arrow-right-2.svg" alt="rrow-right">
+                            </a>
+                        </li>
+                        <li class="powerful__list-item">
+                            <img src="./img/section-10/app-icon.svg" alt="stripe">
+                            <h3 class="list__item-title">Explore prebuilt integrations</h3>
+                            <h4 class="list__item-subtitle">Connect Stripe to over a
+                                hundred tools including Adobe,
+                                Salesforce, and Xero.</h4>
+                            <a href="#!">
+                                <span>Browse App Marketplace</span>
+                                <img src="./img/section-10/arrow-right-2.svg" alt="rrow-right">
+                            </a>
+                        </li>
+                        <li class="powerful__list-item">
+                            <img src="./img/section-10/app-icon.svg" alt="stripe">
+                            <h3 class="list__item-title">Build on Stripe Apps</h3>
+                            <h4 class="list__item-subtitle">Create an app just for your team
+                                or for the millions of businesses
+                                on Stripe.</h4>
+                            <a href="#!">
+                                <span>Learn about Apps</span>
+                                <img src="./img/section-10/arrow-right-2.svg" alt="rrow-right">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

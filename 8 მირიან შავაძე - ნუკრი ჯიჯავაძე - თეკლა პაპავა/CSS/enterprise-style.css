@@ -1,0 +1,166 @@
+.enterprise-wrapper {
+    width: clamp(320px, 80%, 1080px);  /* Width adjusts based on viewport size */
+    margin: auto;  /* Centers the wrapper */
+    padding: clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px);  /* Responsive padding */
+}
+
+
+.enterprise-caption {
+    margin-bottom: clamp(24px, 5vw, 64px); /* Margin adjusts based on viewport width */
+    width: clamp(300px, 60%, 810px); /* Width adjusts based on viewport, with a minimum of 300px and max of 810px */
+}
+  
+.enterprise-caption  h4{
+    font-weight: 500;
+    color: #635BFF;
+    margin-bottom: 24px;
+}
+
+.enterprise-caption h2 {
+    font-weight: 500;
+    font-size: 34px;
+    color: #0A2540;
+    margin-bottom: 24px;
+}
+
+.enterprise-caption p {
+    margin-bottom: 24px;
+    font-weight: 500;
+    color: #425466;
+}
+
+.enterprise-caption .cta-buttons a {
+    background-color: #635BFF;
+    padding: 6px 16px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.enterprise-content {
+    display: flex;
+    gap: 32px;
+    flex-direction: row; /* Default direction for larger screens */
+  }
+  
+  @media (max-width: 768px) {
+    .enterprise-content {
+      flex-direction: column; /* Change to column direction for screens smaller than 768px */
+      gap: 16px; /* Optional: Adjust gap to make it more suitable for smaller screens */
+    }
+  }
+  
+
+.caption-container {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    gap: 48px;
+}
+
+.caption-container article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.caption-container p {
+    padding-left: 16px;
+}
+
+.caption-container article:first-child p:nth-child(2), .caption-container article:nth-child(2) p:nth-child(2) {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .2px;
+    color: #425466;
+}
+
+.caption-container article:last-child p:nth-child(2) span, .caption-container article:last-child p:nth-child(3) span{
+    margin-right: 14px;
+}
+
+.caption-container article:last-child p:first-child {
+    margin-bottom: 24px;
+}
+.caption-container article p:first-child {
+    border-left: 1px solid #635BFF;
+}
+.caption-container article:nth-child(1) p:first-child, .caption-container article:nth-child(2) p:first-child{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card-images-container {
+    background-color: orange;  /* Default background color (orange) */
+    background-image: url("https://images.stripeassets.com/fzn2n1nzq965/4jq1Wguyus7CA7yc2kxMgn/cf7b01aadf305daef40ac8acab654510/home-enterprise-amazon.png?q=80&fm=webp&w=1836");
+    background-size: cover;  /* Ensures the image covers the entire container */
+    background-position: center center;  /* Centers the image */
+    width: clamp(250px, 80%, 100%);  /* Width will adjust based on viewport size */
+    max-width: 810px;  /* Limit the max width */
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow for depth */
+}
+
+.top-part-cont {
+    background-color: rgba(255, 145, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+
+.card-images-container .child-part {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 100%, 450px);
+    margin-bottom: clamp(50px, 16vw, 250px);  /* Responsive margin-bottom */
+}
+
+.child-part img:first-child {
+    padding-top: 16px;
+}
+
+.card-images-container p {
+    font-size: clamp(16px, 4vw, 24px);
+    color: white;
+}
+
+.brands-footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.brands-footer li {
+    list-style: none;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#bmw-border {
+    /* display: none; */
+
+}
+
+.amazon-border {
+    border-top: 1px solid rgb(239, 168, 46);
+}
+
+.maersk-border {
+    border-top: 1px solid rgb(66, 176, 213);
+}
+
+.twilo-border {
+    border-top: 1px solid rgb(197, 70, 71);
+}
+
+.sass {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotateY(23);
+}
+
