@@ -1,0 +1,235 @@
+@use "sass:color";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/*
+  Button component styles
+*/
+
+.btn {
+  @include mixins.button-base;
+  
+  // Primary button
+  &.btn-primary {
+    @include mixins.button-primary;
+  }
+  
+  // Secondary button
+  &.btn-secondary {
+    @include mixins.button-secondary;
+  }
+  
+  // Accent button
+  &.btn-accent {
+    @include mixins.button-base;
+    background-color: variables.$accent-color;
+    color: white;
+    
+    &:hover {
+      background-color: color.adjust(variables.$accent-color, $lightness: -10%);
+      transform: translateY(-2px);
+      box-shadow: variables.$shadow-lg;
+    }
+  }
+  
+  // Outline button
+  &.btn-outline {
+    @include mixins.button-base;
+    background-color: transparent;
+    color: variables.$primary-color;
+    border: 2px solid variables.$primary-color;
+    
+    &:hover {
+      background-color: variables.$primary-color;
+      color: white;
+    }
+  }
+  
+  // Ghost button
+  &.btn-ghost {
+    @include mixins.button-base;
+    background-color: transparent;
+    color: variables.$text-color;
+    
+    &:hover {
+      background-color: variables.$light-gray;
+      color: variables.$secondary-color;
+    }
+  }
+  
+  // Danger button
+  &.btn-danger {
+    @include mixins.button-base;
+    background-color: #e74c3c;
+    color: white;
+    
+    &:hover {
+      background-color: color.adjust(#e74c3c, $lightness: -10%);
+      transform: translateY(-2px);
+      box-shadow: variables.$shadow-lg;
+    }
+  }
+  
+  // Success button
+  &.btn-success {
+    @include mixins.button-base;
+    background-color: #27ae60;
+    color: white;
+    
+    &:hover {
+      background-color: color.adjust(#27ae60, $lightness: -10%);
+      transform: translateY(-2px);
+      box-shadow: variables.$shadow-lg;
+    }
+  }
+}
+
+// Button sizes
+.btn-sm {
+  padding: variables.$spacing-xs variables.$spacing-md;
+  font-size: variables.$font-size-sm;
+}
+
+.btn-lg {
+  padding: variables.$spacing-md variables.$spacing-xl;
+  font-size: variables.$font-size-lg;
+}
+
+.btn-xl {
+  padding: variables.$spacing-lg variables.$spacing-2xl;
+  font-size: variables.$font-size-xl;
+}
+
+// Button states
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.btn.loading {
+  position: relative;
+  color: transparent;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+// Button groups
+.btn-group {
+  @include mixins.flex-center;
+  gap: variables.$spacing-sm;
+  
+  &.btn-group-vertical {
+    flex-direction: column;
+  }
+  
+  &.btn-group-attached {
+    gap: 0;
+    
+    .btn {
+      border-radius: 0;
+      
+      &:first-child {
+        border-top-left-radius: variables.$border-radius-md;
+        border-bottom-left-radius: variables.$border-radius-md;
+      }
+      
+      &:last-child {
+        border-top-right-radius: variables.$border-radius-md;
+        border-bottom-right-radius: variables.$border-radius-md;
+      }
+      
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+// CTA (Call to Action) button
+.cta-button {
+  @include mixins.button-base;
+  background: linear-gradient(135deg, variables.$secondary-color 0%, variables.$accent-color 100%);
+  color: white;
+  font-size: variables.$font-size-lg;
+  font-weight: variables.$font-weight-semibold;
+  padding: variables.$spacing-md variables.$spacing-2xl;
+  box-shadow: variables.$shadow-md;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: variables.$shadow-xl;
+    background: linear-gradient(135deg, color.adjust(variables.$secondary-color, $lightness: -5%) 0%, color.adjust(variables.$accent-color, $lightness: -5%) 100%);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+// Icon buttons
+.btn-icon {
+  @include mixins.flex-center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  
+  &.btn-icon-sm {
+    width: 32px;
+    height: 32px;
+  }
+  
+  &.btn-icon-lg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+// Floating action button
+.fab {
+  @include mixins.button-base;
+  @include mixins.flex-center;
+  position: fixed;
+  bottom: variables.$spacing-xl;
+  right: variables.$spacing-xl;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: variables.$secondary-color;
+  color: white;
+  box-shadow: variables.$shadow-lg;
+  z-index: variables.$z-fixed;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: variables.$shadow-xl;
+  }
+}
+
+// Animations
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

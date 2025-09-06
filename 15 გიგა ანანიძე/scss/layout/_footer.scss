@@ -1,0 +1,318 @@
+// Footer Layout Styles
+.footer {
+  background: linear-gradient(135deg, $color-dark 0%, lighten($color-dark, 10%) 100%);
+  color: $color-light;
+  padding: $spacing-xl 0 $spacing-md;
+  margin-top: auto;
+  
+  .container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  
+  @include respond-to('tablet') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+  }
+  
+  @include respond-to('mobile') {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.footer-section {
+  &:first-child {
+    @include respond-to('desktop') {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Footer Brand Section
+.footer-brand {
+  margin-bottom: $spacing-lg;
+  
+  .footer-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: $spacing-md;
+    filter: brightness(0) invert(1);
+  }
+  
+  .footer-description {
+    color: rgba($color-light, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: $font-size-sm;
+  }
+}
+
+// Social Links
+.social-links {
+  display: flex;
+  gap: $spacing-sm;
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba($color-light, 0.1);
+    border-radius: 50%;
+    color: $color-light;
+    text-decoration: none;
+    transition: all $transition-base;
+    
+    &:hover {
+      background: $color-primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+    }
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Footer Titles
+.footer-title {
+  color: $color-light;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-md;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: $color-primary;
+  }
+}
+
+// Footer Links
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: $spacing-xs;
+    
+    a {
+      color: rgba($color-light, 0.8);
+      text-decoration: none;
+      font-size: $font-size-sm;
+      transition: color $transition-base;
+      display: inline-block;
+      
+      &:hover {
+        color: $color-primary;
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+// Contact Info
+.contact-info {
+  margin-bottom: $spacing-lg;
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    color: rgba($color-light, 0.8);
+    font-size: $font-size-sm;
+    
+    svg {
+      color: $color-primary;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Newsletter
+.newsletter {
+  h4 {
+    color: $color-light;
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  gap: $spacing-xs;
+  
+  @include respond-to('mobile') {
+    flex-direction: column;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    padding: $spacing-sm;
+    border: 1px solid rgba($color-light, 0.2);
+    border-radius: $border-radius-sm;
+    background: rgba($color-light, 0.1);
+    color: $color-light;
+    font-size: $font-size-sm;
+    
+    &::placeholder {
+      color: rgba($color-light, 0.6);
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      background: rgba($color-light, 0.15);
+    }
+  }
+  
+  .newsletter-btn {
+    padding: $spacing-sm $spacing-md;
+    background: $color-primary;
+    color: $color-light;
+    border: none;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: all $transition-base;
+    white-space: nowrap;
+    
+    &:hover {
+      background: darken($color-primary, 10%);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Footer Bottom
+.footer-bottom {
+  border-top: 1px solid rgba($color-light, 0.1);
+  padding-top: $spacing-md;
+  
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    
+    @include respond-to('tablet') {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.copyright {
+  p {
+    color: rgba($color-light, 0.6);
+    font-size: $font-size-xs;
+    margin: 0;
+  }
+}
+
+// Payment Methods
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  
+  @include respond-to('mobile') {
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+  
+  .payment-text {
+    color: rgba($color-light, 0.8);
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    white-space: nowrap;
+  }
+  
+  .payment-icons {
+    display: flex;
+    gap: $spacing-xs;
+    
+    .payment-icon {
+      height: 24px;
+      width: auto;
+      opacity: 0.8;
+      transition: opacity $transition-base;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Footer Legal
+.footer-legal {
+  display: flex;
+  gap: $spacing-md;
+  
+  @include respond-to('mobile') {
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+  
+  a {
+    color: rgba($color-light, 0.6);
+    text-decoration: none;
+    font-size: $font-size-xs;
+    transition: color $transition-base;
+    
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Footer Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-section {
+  animation: fadeInUp 0.6s ease-out;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  }
+}

@@ -1,0 +1,30 @@
+// Import order follows SCSS architecture best practices
+// 1. Abstracts (variables, functions, mixins)
+@use "./abstracts/variables";
+@use "./abstracts/functions";
+@use "./abstracts/mixins";
+
+// 2. Base (reset, fonts, animations)
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/animations";
+
+// 3. Layout
+@use "./layout/main";
+@use "./layout/media";
+
+// 4. Components
+@use "./components/buttons";
+
+// 5. Utilities
+@use "./utilities/colors";
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100dvh;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

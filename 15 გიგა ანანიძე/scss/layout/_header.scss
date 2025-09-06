@@ -1,0 +1,157 @@
+/*
+  Header layout styles
+*/
+
+.header {
+  background-color: $background-color;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  
+  .navbar {
+    @include container;
+    @include flex-between;
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+    
+    @include respond-to(lg) {
+      padding-top: $spacing-lg;
+      padding-bottom: $spacing-lg;
+    }
+  }
+  
+  .nav-brand {
+    .logo {
+      height: 40px;
+      width: auto;
+      
+      @include respond-to(md) {
+        height: 48px;
+      }
+    }
+  }
+  
+  .nav-menu {
+    display: none;
+    
+    @include respond-to(lg) {
+      @include flex-center;
+      gap: $spacing-xl;
+    }
+    
+    li {
+      a {
+        font-family: $font-primary;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-base;
+        color: $text-color;
+        transition: color $transition-fast;
+        position: relative;
+        
+        &:hover {
+          color: $secondary-color;
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $secondary-color;
+          transition: width $transition-normal;
+        }
+        
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .nav-icons {
+    @include flex-center;
+    gap: $spacing-md;
+    
+    .icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      transition: transform $transition-fast;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+      
+      @include respond-to(md) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+  
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    
+    @include respond-to(lg) {
+      display: none;
+    }
+    
+    .burger-icon {
+      width: 24px;
+      height: 24px;
+      transition: transform $transition-fast;
+      
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+// Mobile menu (hidden by default, will be shown with JavaScript)
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $background-color;
+  box-shadow: $shadow-lg;
+  z-index: $z-dropdown;
+  
+  &.active {
+    display: block;
+  }
+  
+  .mobile-nav {
+    padding: $spacing-lg $spacing-md;
+    
+    ul {
+      li {
+        margin-bottom: $spacing-md;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        a {
+          display: block;
+          padding: $spacing-sm 0;
+          font-size: $font-size-lg;
+          font-weight: $font-weight-medium;
+          color: $text-color;
+          border-bottom: 1px solid $border-color;
+          transition: color $transition-fast;
+          
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
